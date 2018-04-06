@@ -1,0 +1,37 @@
+<!--pages/custerservice/custerservice.wxml-->
+<view class='allpage'>
+  <view class='servicepro'>
+    <image src="/images/pic.png"></image>
+    <view class='midle'>
+      <view class='proname'>商品没名称</view>
+      <view class='spec'>商品规格：规格一</view>
+      <view class='prices'>
+        <text>￥20.00</text>
+        <text>￥20.00</text>
+      </view>
+    </view>
+    <view class='numbers'>x1</view>
+  </view>
+  <view class='servicechoice'>
+    <view>选择售后类型</view>
+    <view class='btns'>
+      <button type='button'>退款</button>
+      <button type='button'>退货退款</button>
+    </view>
+  </view>
+  <view class='pade'>
+    <view class='evaluations'>
+      <view class='modei'>问题描述</view>
+      <textarea placeholder='请填写评价内容' name="" data-index='{{index}}' bindblur="comments"></textarea>
+      <view class='caad'>
+        <image src="/images/camr.png" bindtap='chooseImg' data-index='{{index}}'></image>
+        <block wx:for='{{comments[index]["photos"]}}' wx:key='item'>
+          <image src="{{item}}"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='confirms'>
+    <button type='button'>提交申请</button>
+  </view>
+</view>

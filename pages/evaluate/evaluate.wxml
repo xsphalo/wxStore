@@ -1,0 +1,50 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='allpage'>
+  <form catchsubmit="formSubmit">
+    <block wx:for='{{itemlist}}' wx:key="keys">
+      <view class='pade'>
+        <view class='evaluations'>
+          <view class='producmsg'>
+            <image src="{{imgurl+item.goods.mphoto}}"></image>
+            <view class='prostar'>
+              <view class='pinfont'>请对本商品进行评分</view>
+              <view class="comment1-description" style="display:flex;flex-direction:row;margin-left:-10rpx;">
+                <view class="star-pos" style="display:flex;flex-direction:row;">
+                  <view class="starsM {{comments[index]['star']>=1? '': 'hideStar'}}" bindtap="changeColor11" data-index='{{index}}'></view>
+                  <view class="starsM {{comments[index]['star']>=2? '': 'hideStar'}}" bindtap="changeColor12" data-index='{{index}}'></view>
+                  <view class="starsM {{comments[index]['star']>=3? '': 'hideStar'}}" bindtap="changeColor13" data-index='{{index}}'></view>
+                  <view class="starsM  {{comments[index]['star']>=4? '': 'hideStar'}}" bindtap="changeColor14" data-index='{{index}}'></view>
+                  <view class="starsM  {{comments[index]['star']>=5? '': 'hideStar'}}" bindtap="changeColor15" data-index='{{index}}'></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <textarea placeholder='请填写评价内容' name="" data-index='{{index}}' bindblur="comments" placeholder-class='palse' class='textares'></textarea>
+          <view class='caad'>
+            <image src="/images/camr.png" bindtap='chooseImg' data-index='{{index}}'></image>
+            <block wx:for='{{comments[index]["photos"]}}' wx:key='keys'>
+              <image src="{{imgurl+item}}"></image>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='pingjia'>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{items}}" wx:key="keys">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+    <view class="particulars" style="display:{{screenType?'block':'none'}}">
+      <view class='product-img'>
+        <image src="/images/sucess.png" class='imgbg'></image>
+        <text>提交成功</text>
+      </view>
+    </view>
+    <view class='tijiao'>
+      <button type="button" hover-class="hovered" bindtap='dianping' formType="submit">提交评价</button>
+    </view>
+  </form>
+</view>

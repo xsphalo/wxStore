@@ -1,0 +1,23 @@
+<!--pages/myteam/myteam.wxml-->
+<view class='allpage'>
+  <view class='tophead'>
+    <view class="items {{its==1?'active':''}}" data-its="1" bindtap='cates'>
+      <view></view>
+      <view class='members'>直接下级({{totals}})</view>
+      <view class='lines'></view>
+    </view>
+    <view class="items {{its==2?'active':''}}" data-its="2" bindtap='cates'>
+      <view></view>
+      <view class='members'>间接下级({{totalid}})</view>
+      <view class='lines'></view>
+    </view>
+  </view>
+  <view class='vips' wx:for="{{team}}" wx:key="keys">
+    <view class='vipname'>
+      <view>会员名称：{{item.nickname}}</view>
+      <view>加入时间：{{item.created_at}}</view>
+    </view>
+    <view class='chacter'>{{item.level.title}}</view>
+  </view>
+  <view class='nomore' wx:if="{{!hasmore}}">没有更多了</view>
+</view>

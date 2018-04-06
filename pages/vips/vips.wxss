@@ -1,0 +1,248 @@
+/* pages/vips/vips.wxss */
+@import "/dist/tabbar/tabbar.wxss";
+@import '/dist/index.wxss';
+.allpage{
+  padding-bottom: 98rpx;
+}
+.vips-head{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 20rpx 0;
+}
+.headleft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headright button{
+  width: 120rpx;
+  height: 50rpx;
+  border:1rpx solid #ccc;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 25rpx 25rpx;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 28rpx;
+  color: #999;
+}
+.headright button::after{
+  border: 0;
+}
+.headleft image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.headleft view{
+  font-size: 28rpx;
+  color: #999;
+}
+.pingj{
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+.pingj image{
+  width: 280rpx;
+  height: 280rpx;
+}
+.vipname{
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  padding: 20rpx 0;
+  background: #fff;
+}
+.progress{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  width: 600rpx;
+  height: 12rpx;
+  border-radius: 6rpx 6rpx;
+  margin: 0 auto;
+}
+.progress view{
+  background: #ccc;
+  width: 150rpx;
+  height: 12rpx;
+  border-radius: 6rpx 6rpx;
+}
+.progress .active{
+  background: #ff9812;
+}
+
+.proname{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600rpx;
+  margin: 0 auto;
+  padding-top: 18rpx;
+  padding-bottom: 40rpx;
+}
+.proname view{
+  width: 150rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+.actives{
+  color: #ff9812 !important;
+}
+
+.bgcolor{
+  background: #fff;
+  margin-bottom: 14rpx;
+}
+
+.middleceon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0 16rpx;
+}
+.leftbot image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.leftbot,
+.lefttop{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.lefttop view:first-child{
+  background: #ff9812;
+  height: 30rpx;
+  width: 6rpx;
+  margin-right: 10rpx;
+}
+.lefttop view:last-child{
+  font-size: 30rpx;
+  color: #333;
+}
+.leftbot view:last-child{
+  font-size: 26rpx;
+  color: #ff9812;
+}
+.miright button{
+  width: 150rpx;
+  color: #fff;
+  height: 60rpx;
+  background: #ff4a44;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 40rpx;
+}
+.miright button::after{
+  border: 0;
+}
+.lefttop{
+  padding: 20rpx 0;
+}
+.leftbot{
+  padding-bottom: 30rpx;
+}
+.explain{
+  background: #fff;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  padding-bottom: 12rpx;
+}
+.expl view{
+  color: #666;
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+.guiz{
+  justify-content: flex-start;
+  padding: 12rpx;
+}
+
+.particulars{
+  width:420rpx;
+  border:0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 38%;
+  left:18%;
+  border-radius:10px;
+  padding-bottom: 60rpx;
+}
+
+.myimg{
+  width: 420rpx;
+  height: 280rpx;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 30rpx 50rpx;
+  padding-bottom: 0;
+  position: relative;
+}
+.btns button{
+  width: 320rpx;
+  height: 58rpx;
+  border: 1rpx solid #ffaf47;
+  text-align: center;
+  line-height: 58rpx;
+  padding: 0;
+  margin: 0;
+  border-radius: 29rpx 29rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  background: #fff;
+}
+.btns button::after{
+  border: 0;
+}
+.btns button:first-child{
+  color: #fff;
+  background:#ffaf47;
+  margin-bottom: 20rpx;
+}
+.btns button:nth-child(2){
+  color: #ffaf47;
+  background: #fff;
+}
+
+.closing{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 280rpx;
+  left: 45%;
+}
+.pingj{
+  position: relative;
+}
+.curents{
+  position: absolute;
+  bottom: 78rpx;
+  left: 39.4%;
+  font-size: 26rpx;
+  color: #fff;
+   width: 160rpx; 
+  height: 30rpx;
+  background: #f73434;
+  line-height: 30rpx;
+  text-align: center;
+  z-index: 999;
+}

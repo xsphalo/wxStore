@@ -1,0 +1,15 @@
+<!--pages/idety/idety.wxml-->
+<view class='allpage'>
+  <image src="/images/idcard.png" class='toppic'></image>
+  <form bindsubmit="formSubmit">
+    <view class='ipts margins'>
+      <input type='text' placeholder='请输入姓名' placeholder-class='places' name="act_name" bindinput='getname'></input>
+    </view>
+    <view class='ipts'>
+      <input type='idcard' placeholder='请输入身份证号码' placeholder-class='places' name="idcard" bindinput='getidcard'></input>
+    </view>
+    <view class='btns'>
+      <button type='button' style="background:{{bgcolr?'#ff9812':'#999'}}" formType="submit">确认提交</button>
+    </view>
+  </form>
+</view>

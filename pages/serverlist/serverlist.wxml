@@ -1,0 +1,41 @@
+<!--pages/serverlist/serverlist.wxml-->
+<view class='allpage'>
+  <view class='produs'>
+    <view class='products'>
+      <view class='producmsg'>
+        <image src="{{imgurl+iteas.goods.mphoto}}"></image>
+        <view class='prodeat'>
+          <view class='prodea-msg'>
+            <view>{{iteas.goods.title}}</view>
+            <view wx:if="{{iteas.option !== ''}}">规格：{{iteas.option.title}}</view>
+            <view class='priceopt'>
+              <view>￥{{iteas.price}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='choices'>
+    <view class='titles'>选择售后类型</view>
+    <view class='bthsa'>
+      <button type='button' data-types="1" bindtap="cateslec" class="{{types==1?'bgcolor':''}}">退款</button> 
+       <button type='button' data-types="2" bindtap="cateslec" class="{{types==2?'bgcolor':''}}">退货退款</button> 
+    </view>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='textars'>
+      <view class='modei'>问题描述</view>
+      <textarea placeholder='请填写评价内容' name="" data-index='{{index}}' bindinput="comments" placeholder-class='palse' class='textares'></textarea>
+      <view class='caad'>
+        <image src="/images/camr.png" bindtap='chooseImg'></image>
+        <block wx:for='{{comments}}' wx:key='keys'>
+          <image src="{{imgurl+item}}"></image>
+        </block>
+      </view>
+    </view>
+    <view class='buttons'>
+      <button type='button' formType="submit">提交申请</button>
+    </view>
+  </form>
+</view>

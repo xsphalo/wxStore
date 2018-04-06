@@ -1,0 +1,14 @@
+<!--pages/hasidcard/hasidcard.wxml-->
+<view class='allpage'>
+  <view class='ids'>
+    <view class='idleft'>已认证</view>
+    <view class='idright' bindtap='toidety'>
+      <image src="/images/idbian.png"></image>
+      <text>重新编辑</text>
+    </view>
+  </view>
+  <view class='msgs'>
+    <view class='msga'>姓名：{{msgs.act_name}}</view>
+    <view class='msga'>身份证号：{{msgs.idcard}}</view>
+  </view>
+</view>

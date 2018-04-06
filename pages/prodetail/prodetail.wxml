@@ -1,0 +1,146 @@
+<!--pages/prodetail/prodetail.wxml-->
+<import src="/dist/cart/cart.wxml" />
+<template is="cart" data='{{prodetail:prodetail,screenType:screenType,imgurl:imgurl,counts:counts,cant:cant,froms:froms,idxArr:idxArr,proprice:proprice,stock:stock}}' />
+<import src="/dist/share/share.wxml" />
+<template is="share" data='{{direct:direct,save:save,actionSheetHidden:actionSheetHidden}}' />
+<import src="../../wxParse/wxParse.wxml" />
+<view class='allpage'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .1)" indicator-active-color="#fff">
+    <block wx:for="{{photos}}" wx:key="keys">
+      <swiper-item>
+        <image src="{{imgurl+item}}" class="slide-image" bindtap='viewBanner' data-src="{{imgurl+item}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='promsg'>
+    <view class='proprice'>
+      <text>{{prodetail.title}}</text>
+    </view>
+    <view class='shares' bindtap='toshare'>
+      <image src="/images/tui.png"></image>
+      <text>推广</text>
+    </view>
+  </view>
+  <view class='pricesa'>
+    <view class='deleft' bindtap='bijia'>
+      <view class='theprice'>￥{{prodetail.saleprice}}</view>
+      <button type='button'>比价</button>
+    </view>
+    <view class='salesnum'>
+      <view>销量</view>
+      <view>{{prodetail.sales}}</view>
+    </view>
+  </view>
+  <view class='botbor' wx:if="{{prodetail.isspec==1}}">
+    <view class='comitsa'>
+      <text></text>
+      <text>选择规格</text>
+    </view>
+  </view>
+  <view class='spaecs' bindtap="choicespec" wx:if="{{prodetail.isspec==1}}">
+    <view>{{optmp.title}}</view>
+    <image src="/images/choice.png"></image>
+  </view>
+  <view class='botbor' bindtap='toeve' data-id="{{prodetail.id}}">
+    <view class='flss'>
+      <view class='comitsa'>
+        <text></text>
+        <text>商品评价</text>
+      </view>
+      <view class='comm'>
+        <view>共{{total}}条评价</view>
+        <image src="/images/righto.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class='nocom' wx:if="{{nocom}}">暂时没有任何评价呦...</view>
+  <view class='commitsraea' wx:for="{{commits}}" wx:key="keys" wx:if="{{!nocom}}" wx:for-index='cidx'>
+    <view class='padlr'>
+      <view class='linflex'>
+        <view class='prostar'>
+          <view class='membermsg'>
+            <image class='avtar' src="{{item.member.avatar}}"></image>
+            <view class='pinfont'>{{item.member.nickname}}</view>
+          </view>
+          <view class="comment1-description" style="display:flex;flex-direction:row;margin-left:-10rpx;margin-left:20rpx;">
+            <view class="star-pos" style="display:flex;flex-direction:row;">
+              <view class="starsM  {{item.star>=1? '': 'hideStar'}}" bindtap="changeColor11"></view>
+              <view class="starsM  {{item.star>=2? '': 'hideStar'}}" bindtap="changeColor12"></view>
+              <view class="starsM  {{item.star>=3? '': 'hideStar'}}" bindtap="changeColor13"></view>
+              <view class="starsM  {{item.star>=4? '': 'hideStar'}}" bindtap="changeColor14"></view>
+              <view class="starsM  {{item.star>=5? '': 'hideStar'}}" bindtap="changeColor15"></view>
+            </view>
+          </view>
+        </view>
+        <view class='comitime'>{{item.created_at}}</view>
+      </view>
+      <view class='comitsfont'>
+        <view>{{item.comment}}</view>
+      </view>
+      <view class='commitsimg'>
+        <block wx:for="{{item.photos}}" wx:key="keys">
+          <image src="{{imgurl+item}}" data-idx='{{cidx}}' data-src='{{imgurl+item}}' bindtap='viewComment'></image>
+        </block>
+      </view>
+    </view>
+    <view class='kefuhui' wx:if="{{item.reply==''}}">
+      <image src="/images/huifu.png"></image>
+      <view>客服回复：{{item.reply.comment}}</view>
+    </view>
+  </view>
+  <view class='botbor'>
+    <view class='comitsa'>
+      <text></text>
+      <text>商品详情</text>
+    </view>
+  </view>
+  <view class='detailpro'>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </view>
+  <view class='dispace'></view>
+  <view class='paysel'>
+    <button open-type="contact" class='tokefu'>
+      <image src="/images/kefu.png"></image>
+      <text>找客服</text>
+    </button>
+    <view class='toshop' bindtap='trigger'>
+      <image src="/images/collect.png" class='coll' wx:if="{{!trigger}}"></image>
+      <image src="/images/trigger.png" class='coll' wx:else></image>
+      <text wx:if="{{!trigger}}">加收藏</text>
+      <text wx:else style='color:#ff9812'>加收藏</text>
+    </view>
+    <view class='toshop' bindtap="tocart">
+      <image src="/images/cart_normal.png"></image>
+      <text>购物车</text>
+    </view>
+    <view class='joincart'>
+      <button type="button" hover-class='hoverd' bindtap="addcart">加入购物车</button>
+    </view>
+    <view class="paynow">
+      <button type="button" hover-class='hoverd' bindtap="buy">立即购买</button>
+    </view>
+  </view>
+
+  <view class='shader' style="display:{{screenTypes?'block':'none'}}" bindtap='hideshades'></view>
+  <view class="particularsr" style="display:{{screenTypes?'block':'none'}}">
+    <view class='sheetheads'>
+      <view></view>
+      <view>价格大比拼</view>
+      <image src="/images/close.png" bindtap='hideshades'></image>
+    </view>
+    <view class="content borderbot">
+      <view>{{prodetail.title}}</view>
+      <view>￥{{duosaleprice}}</view>
+    </view>
+    <view class='bijias borderbot'>
+      <view>淘宝价 ￥{{tbprice}}</view>
+      <text selectable="true" class='linksa'>{{tblink}}</text>
+      <button type='button' bindtap="copyTB">复制链接</button>
+    </view>
+    <view class='bijias borderbot'>
+      <view>京东价 ￥{{jdprice}}</view>
+      <text selectable="true" class='linksa'>{{jdlink}}123</text>
+      <button type='button' bindtap="copyJD">复制链接</button>
+    </view>
+  </view>
+</view>

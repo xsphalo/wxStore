@@ -1,0 +1,47 @@
+/* pages/hasidcard/hasidcard.wxss */
+page{
+  background: #fff;
+}
+.ids{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80rpx 50rpx;
+}
+.idleft{
+  font-size: 60rpx;
+  color: #999;
+  font-weight: bold;
+}
+.idright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff9812;
+  width: 160rpx;
+  height: 50rpx;
+  border-radius: 25rpx 25rpx;
+}
+.idright image{
+  width: 30rpx;
+  height: 31rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+}
+.idright text{
+  font-size: 26rpx;
+  color: #fff;
+  display: inline-block;
+}
+.msgs{
+  padding: 0 50rpx;
+}
+.msga{
+  height: 90rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  width: 650rpx;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 110rpx;
+  box-sizing: border-box
+}

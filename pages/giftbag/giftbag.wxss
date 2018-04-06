@@ -1,0 +1,81 @@
+/* pages/giftbag/giftbag.wxss */
+
+page {
+  background: #fff;
+}
+
+.bigpic {
+  width: 100%;
+  height: 360rpx;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headtitle {
+  font-size: 36rpx;
+  color: #ff9812;
+  text-align: center;
+  width: 100%;
+  padding-top: 50rpx;
+  padding-bottom: 10rpx;
+}
+
+.enlish {
+  font-size: 18rpx;
+  color: #999;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20rpx;
+}
+
+.bagitem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 260rpx;
+  background: #f8f8f8;
+  padding: 30rpx 20rpx;
+  box-sizing: content-box;
+  margin-bottom: 20rpx;
+}
+
+.theright {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 200rpx;
+  width: 500rpx;
+}
+
+.bagitem image:first-child {
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+}
+
+.bagname {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.prices {
+  font-size: 38rpx;
+  color: #df0028;
+  font-weight: bold;
+}
+
+.theright button {
+  margin: 0;
+  padding: 0;
+  background: #ff9812;
+  color: #fff;
+  font-size: 30rpx;
+  width: 180rpx;
+  height: 52rpx;
+  border-radius: 26rpx 26rpx;
+  text-align: center;
+  line-height: 52rpx;
+}

@@ -1,0 +1,76 @@
+/* pages/transoprt/transoprt.wxss */
+page{
+  background: #fff;
+}
+.allpage{
+  padding-top: 136rpx;
+}
+.transtop{
+  height: 136rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-bottom: 20rpx; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.divs{
+  width: 100%;
+  height: 20rpx;
+  background: #F8F8F8;
+}
+.transtop view{
+  font-size: 30rpx;
+  color: #666;
+}
+.transtop view:first-child{
+  margin-bottom: 5rpx;
+}
+.transtop view:last-child{
+  margin-top: 5rpx;
+}
+.lefts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20rpx;
+}
+.lefts image{
+  width: 22rpx;
+  height: 22rpx;
+}
+.lines{
+  width: 2rpx;
+  height: 150rpx;
+  background: #ccc;
+}
+.transprogress{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+}
+.rights{
+  height: 170rpx;
+}
+.rights view{
+  font-size: 26rpx;
+  color: #999;
+}
+
+.blocks{
+  padding: 20rpx;
+}
+.blocks .transprogress:last-child .lefts .lines{
+  opacity: 0;
+}
+.wider{
+  width: 30rpx !important;
+  height: 30rpx !important;
+}

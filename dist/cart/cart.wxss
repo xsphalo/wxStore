@@ -1,0 +1,234 @@
+.shade {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particulars {
+  width: 100%;
+  border: 0;
+  z-index: 9999;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+}
+
+.produsdetail {
+  background: #fff;
+  padding-top: 20rpx;
+  position: relative;
+}
+
+.detaname {
+  height: 140rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.detaname image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+}
+
+.picbg {
+  background: #fff;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border: 1rpx solid #e6e6e6;
+  margin-bottom: 106rpx;
+  margin-right: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.detaname .promsgs view:first-child {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.detaname .promsgs view:last-child {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ff0028;
+}
+
+.detaguige {
+  padding-left: 20rpx;
+}
+
+.guige {
+  padding: 20rpx 0;
+  border-top: 1rpx solid #e6e6e6;
+}
+
+.detaguige .guige:last-child {
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.guige .btbns button {
+  font-size: 24rpx;
+  color: #333;
+  background: #fff;
+  border: 1rpx solid #ccc;
+  line-height: 50rpx;
+  display: inline-block;
+  height: 50rpx;
+  padding: 0 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.detanumber {
+  height: 110rpx;
+  padding-left: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 110rpx;
+}
+
+.detanumber .numb {
+  font-size: 16px;
+  color: #333;
+}
+
+.detanumber .nums {
+  font-size: 18px;
+  color: #ff5858;
+  margin: 0 20rpx;
+}
+
+.detanumber image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.deca, .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #eee;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.plus image {
+  width: 24rpx;
+  height: 2rpx;
+}
+
+.detanumber view {
+  line-height: 10rpx;
+}
+
+.joincarts button {
+  background: #ff5858;
+  color: #fff;
+  height: 98rpx;
+  width: 100%;
+  line-height: 98rpx;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.close image {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 20rpx;
+}
+
+.diaji {
+  opacity: 0.8;
+}
+
+.detanumber .numb {
+  font-size: 16px;
+  color: #333;
+}
+
+.detanumber .nums {
+  font-size: 18px;
+  color: #333;
+  margin: 0 20rpx;
+  text-align: center;
+  width: 90rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #eee;
+}
+
+.particulars .paysel {
+  height: 98rpx;
+  display: flex;
+  z-index: 9999;
+  background: #fff;
+  position: static;
+}
+
+.halfwid button:first-child {
+  background: #ffb54c;
+}
+
+.halfwid button:last-child {
+  background: #ff3e3e;
+}
+
+.hoverd {
+  opacity: 0.8;
+}
+
+.halfwid button {
+  width: 100%;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}
+
+.rigts {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.btbns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btbns button {
+  margin: 0;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.btncolor {
+  background: #ff9812 !important;
+  color: #fff !important;
+  border: 1rpx solid #ff9812 !important;
+  box-sizing: border-box !important;
+}

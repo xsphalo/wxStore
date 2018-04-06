@@ -1,0 +1,16 @@
+<!--pages/grawsdetail/grawsdetail.wxml-->
+<view class='allpage'>
+  <view class='detaisl' wx:for="{{mlogs}}" wx:key="keys">
+    <view class='detag'>
+      <view>{{item.types_text}}</view>
+      <view wx:if="{{item.status==1}}">+{{item.wallet1}}</view>
+      <view wx:if="{{item.status==0}}">-{{item.wallet1}}</view>
+    </view>
+    <view class="comBot">
+      <view class='detime'>{{item.created_at}}</view>
+      <view class="comStates" wx:if="{{item.status==1}}">已入帐</view>
+      <view class="comStates" wx:if="{{item.status==0}}">未入帐</view>
+    </view>
+  </view> 
+  <view class='nomore' wx:if="{{!hasmore}}">扯啥呢，没有啦</view>
+</view>

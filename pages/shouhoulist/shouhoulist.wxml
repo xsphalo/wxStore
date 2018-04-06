@@ -1,0 +1,23 @@
+<!--pages/shouhoulist/shouhoulist.wxml-->
+<view class='allpage'>
+  <block wx:for="{{shouhou}}" wx:key="keys" wx:for-item="its">
+    <view class='produs'>
+      <view class='products'>
+        <view class='producmsg'>
+          <image src="{{imgurl+its.item.goods.mphoto}}"></image>
+          <view class='prodeat'>
+            <view class='prodea-msg'>
+              <view>{{its.item.goods.title}}</view>
+              <view wx:if="{{its.item.option !== ''}}">规格：{{its.item.option.title}}</view>
+              <view class='priceopt'>
+                <view>￥{{its.item.goods.saleprice}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='satusx'>{{its.status_text}}</view>
+  </block>
+  <view class='nomore' wx:if="{{!hasmore}}">没有更多了</view>
+</view>

@@ -1,0 +1,218 @@
+/* pages/percenter/percenter.wxss */
+@import "/dist/tabbar/tabbar.wxss";
+
+.allpage {
+  padding-bottom: 150rpx;
+}
+
+.usermsgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff9812;
+  height: 220rpx;
+  position: relative;
+}
+
+.userleft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userleft image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  border: 2rpx solid #fff;
+  background: #fff;
+}
+
+.userleft text {
+  font-size: 30rpx;
+  color: #fff;
+  display: block;
+}
+
+.editfile .connect text, .editfile navigator text {
+  font-size: 12px;
+  color: #999;
+}
+
+.editfile .connect, .editfile navigator {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  padding-left: 60rpx;
+  padding-right: 0;
+}
+
+.editfile .connect image, .editfile navigator image {
+  width: 13rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+
+.ordertop {
+  padding: 0 20rpx;
+  /* border-bottom: 1px solid #e6e6e6; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  background: #fff;
+}
+
+.oderleft {
+  font-size: 16px;
+  color: #333;
+}
+
+.editfile navigator text {
+  font-size: 12px;
+  color: #999;
+}
+
+.editfile navigator image {
+  width: 13rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+
+.orderbottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 149rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.orderbottom .conmsg1 image {
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.orderbottom .conmsg2 image {
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.orderbottom .conmsg3 image {
+  width: 70rpx;
+  height: 50rpx;
+}
+
+.orderbottom .conmsg4 image {
+  width: 56rpx;
+  height: 48rpx;
+}
+
+.orderbottom .conmsg5 image {
+  width: 60rpx;
+  height: 50rpx;
+}
+
+.orderbottom view {
+  text-align: center;
+}
+
+.orderbottom view text {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+.userlist {
+  background: #fff;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.qianpic {
+  width: 96rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qianpic image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.rightsmsg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 654rpx;
+  height: 90rpx;
+  border-bottom: 0.5px solid #e6e6e6;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+
+.rightsmsg text {
+  font-size: 30rpx;
+  color: #333;
+  display: block;
+}
+
+.rightsmsg image {
+  width: 16rpx;
+  height: 28rpx;
+}
+
+.marbot {
+  margin-bottom: 20rpx;
+}
+
+.setbtn {
+  border-radius: 0;
+  outline: none;
+  height: 92rpx;
+  padding: 0;
+  background: #fff;
+}
+
+.setbtn::after {
+  content: none;
+  border: 0;
+}
+
+.morhei {
+  height: 92rpx;
+  margin-top: 20rpx;
+}
+
+.nobot {
+  border-bottom: 0;
+}
+
+.points {
+  font-size: 24rpx;
+  color: #ff9812;
+  text-align: center;
+  height: 26rpx;
+  line-height: 26rpx;
+  background: #fff;
+  border-radius: 23rpx 0 0 23rpx;
+  position: absolute;
+  right: 0;
+  bottom: 20rpx;
+  padding: 10rpx 15rpx;
+  width: 110rpx;
+}
+.userleft{
+  position: relative;
+}
+.levles{
+  position: absolute;
+  left: 6rpx;
+  top: 0;
+  width: 32rpx !important;
+  height: 30rpx !important;
+}

@@ -1,0 +1,30 @@
+<!--pages/myaccount/myaccount.wxml-->
+<view class='allpage'>
+  <view class='moneypic'>
+    <image src="/images/money.png"></image>
+  </view>
+  <view class="comDeil">
+    <view class="canPresented">
+      <view class='commission'>不可提现佣金</view>
+      <view class='priceses'>
+        <text>￥</text>
+        <text>{{pedding}}</text>
+      </view>
+    </view>
+    <view class='notPresented'>
+      <view class='commission'>可提现佣金</view>
+      <view class='priceses'>
+        <text>￥</text>
+        <text>{{able}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='btns'>
+    <button type='button' bindtap='towidth'>佣金提现</button>
+    <button type='button' bindtap='toyongdetail'>查看明细</button>
+  </view>
+  <view class='tips' wx:if="{{withinfo.handing!=='undefind' && withinfo.min!=='undefind'||withinfo.handing!==''&&withinfo.min!==''}}">提现规则：
+     <text wx:if="{{withinfo.min!==0||withinfo.min!==''||withinfo.min!==undefind}}">满{{withinfo.min}}元起提，</text>
+    <text wx:if="{{withinfo.handing!==0||withinfo.handing!==''}}">扣除{{withinfo.handing}}%的个人所得税</text>
+  </view>
+</view>

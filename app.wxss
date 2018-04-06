@@ -1,0 +1,62 @@
+/**app.wxss**/
+@import "/dist/notice/notice.wxss";
+
+page {
+  background: #f2f2f2;
+}
+
+.allpage {
+  height: 100%;
+}
+
+.nomore {
+  color: #999;
+  font-size: 24rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.shade {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+button::after {
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.padlr {
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.bijias {
+  position: relative;
+}
+
+.linksa {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.content view:first-child {
+  text-align: center;
+}

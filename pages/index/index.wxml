@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<import src="/dist/tabbar/tabbar.wxml" />
+<import src="/dist/notice/notice.wxml" />
+<template is="notice" data="{{notice:notice,hide:hide,animshow:animshow}}" />
+<template is="tabbar" data="{{tabbar,rlen:rlen}}" />
+<scroll-view style="height: 1206rpx;padding-bottom:90rpx;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun" scroll-with-animation="true">
+  <view class='allpage'>
+    <view class='searchs'>
+      <image src="/images/plusicon.png"></image>
+      <input type='text' placeholder='请输入要查找的商品' placeholder-class='placeclass' bindtap="toallshop" disabled='true'></input>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:280rpx;'>
+      <block wx:for="{{bannerlist}}" wx:key="keys">
+        <swiper-item>
+          <image src="{{imgurl+item.thumb}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='prodlist'>
+      <block wx:for="{{categories}}" wx:key="keys">
+        <navigator url="{{item.links}}" hover-class='none'>
+          <view class='prodname' data-id="{{item.id}}">
+            <image src="{{imgurl+item.thumb}}"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view class='heads'>{{titles}}</view>
+    <view class='prolists'>
+      <view class='prolist-item' wx:for="{{goodslist}}" wx:key="keys">
+        <image src="{{imgurl+item.mphoto}}" data-id="{{item.id}}" bindtap='todetail'></image>
+        <view class='proname'>{{item.title}}</view>
+        <view class='botmsg'>
+          <view class='prices'>￥{{item.saleprice}}</view>
+          <image src="/images/bijia.png" bindtap='bijia' data-index="{{index}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class='nomore' wx:if="{{!hasmore}}">没有更多了</view>
+    <view class='right-top' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">TOP</view>
+  </view>
+  <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='sheethead'>
+      <view></view>
+      <view>价格大比拼</view>
+      <image src="/images/close.png" bindtap='hideshade'></image>
+    </view>
+    <view class="content borderbot">
+      <view>{{protitle}}</view>
+      <view>￥{{duosaleprice}}</view>
+    </view>
+    <view class='bijias borderbot'>
+      <view>淘宝价 ￥{{tbprice}}</view>
+      <text selectable="true" class='linksa'>{{tblink}}</text>
+      <button type='button' bindtap="copyTB">复制链接</button>
+    </view>
+    <view class='bijias borderbot'>
+      <view>京东价 ￥{{jdprice}}</view>
+      <text selectable="true" class='linksa'>{{jdlink}}123</text>
+      <button type='button' bindtap="copyJD">复制链接</button>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,46 @@
+<!--pages/userevaluate/userevaluate.wxml-->
+<view class='allpage'>
+  <block wx:if="{{!nocom}}">
+    <view class='evalu'>共{{total}}条顾客评价</view>
+    <view class='commitsraea' wx:for="{{commits}}" wx:key="keys" wx:for-index='cidx'>
+      <view class='padlr'>
+        <view class='linflex'>
+          <view class='prostar'>
+            <view class='membermsg'>
+              <image class='avtar' src="{{item.member.avatar}}"></image>
+              <view class='pinfont'>{{item.member.nickname}}</view>
+            </view>
+            <view class="comment1-description" style="display:flex;flex-direction:row;margin-left:-10rpx;margin-left:20rpx;">
+              <view class="star-pos" style="display:flex;flex-direction:row;">
+                <view class="starsM  {{item.star>=1? '': 'hideStar'}}" bindtap="changeColor11"></view>
+                <view class="starsM  {{item.star>=2? '': 'hideStar'}}" bindtap="changeColor12"></view>
+                <view class="starsM  {{item.star>=3? '': 'hideStar'}}" bindtap="changeColor13"></view>
+                <view class="starsM  {{item.star>=4? '': 'hideStar'}}" bindtap="changeColor14"></view>
+                <view class="starsM  {{item.star>=5? '': 'hideStar'}}" bindtap="changeColor15"></view>
+              </view>
+            </view>
+          </view>
+          <view class='comitime'>{{item.created_at}}</view>
+        </view>
+        <view class='comitsfont'>
+          <view>{{item.comment}}</view>
+        </view>
+        <view class='commitsimg'>
+          <block wx:for="{{item.photos}}" wx:key="keys" wx:for-item="items">
+            <image src="{{imgurl+items}}" data-idx='{{cidx}}' data-current='{{imgurl+items}}' bindtap='viewComment'></image>
+          </block>
+        </view>
+      </view>
+      <view class='kefuhui' wx:if="{{item.reply==''}}">
+        <image src="/images/huifu.png"></image>
+        <view>客服回复：{{item.reply.comment}}</view>
+      </view>
+    </view>
+    <view class='nomore' wx:if="{{!hasmore}}">没有更多评论了</view>
+  </block>
+  <view class='addresnai' wx:if="{{nocom}}">
+    <view class='lines'></view>
+    <view>暂无评价</view>
+    <view class='lines'></view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/withgraws/widthgraws.wxml-->
+<view class='allpage'>
+  <form bindsubmit="formSubmit">
+    <view class='moneytop'>
+      <view class='cashed'>
+        <view>提现金额</view>
+        <view class='edu'>
+          <text>￥</text>
+          <input type='digit' name="amount" bindinput='amount'></input>
+        </view>
+      </view>
+      <view class='canti'>
+        <text>可提现的佣金</text>
+        <text>{{wallet1}}</text>
+      </view>
+    </view>
+    <!-- <view class='chargemsg'>
+      <view class='iptin'>
+        <text>手机号码</text>
+        <input type='number' placeholder='请输入' placeholder-class='places' name="mobile" bindblur='getmobile' value='{{info.mobile}}'></input>
+      </view>
+      <view class='iptin'>
+        <text>开户姓名</text>
+        <input type='text' placeholder='请输入' placeholder-class='places' name="acct_name" bindblur='getname' value='{{info.acct_name}}'></input>
+      </view>
+      <view class='iptin'>
+        <text>银行卡号</text>
+        <input type='number' placeholder='请输入' placeholder-class='places' name="bankno" bindblur='getbankno' value='{{info.bankno}}'></input>
+      </view>
+    </view> -->
+    <view class='tixian'>
+      <button type='button' formType="submit">立即提现</button>
+    </view>
+  </form>
+</view>

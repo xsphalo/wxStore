@@ -1,0 +1,118 @@
+/* pages/addreset/addreset.wxss */
+
+.inputmsg {
+  height: 90rpx;
+  background: #fff;
+  padding-left: 20rpx;
+}
+
+.inputmsg .fromfont {
+  width: 160rpx;
+  font-size: 16px;
+  color: #333;
+  margin-right: 30rpx;
+}
+
+.inputmsg input {
+  color: #333;
+  font-size: 12px;
+}
+
+.borderbot {
+  height: 89rpx;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.borderbots {
+  height: 89rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20rpx;
+}
+
+.inputmsg .fromfonts {
+  font-size: 16px;
+  color: #333;
+}
+
+.body-view switch {
+  transform: scale(0.8);
+}
+
+.confirmsbtn {
+  margin-top: 30rpx;
+}
+
+.confirmsbtn button {
+  width: 710rpx;
+  height: 90rpx;
+  background: #ff9812;
+  color: #fff;
+}
+
+.hovered {
+  opacity: 0.8;
+}
+
+.current {
+  font-size: 12px;
+  color: #333;
+}
+
+.shade {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particulars {
+  height: 250rpx;
+  width: 420rpx;
+  border: 0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 46%;
+  left: 22%;
+  border-radius: 10px;
+}
+
+.product-img {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-img text {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+.product-img .imgbg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.picker {
+  font-size: 24rpx;
+  color: #333;
+  padding: 20rpx 0;
+  width: 500rpx;
+}

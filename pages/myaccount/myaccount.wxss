@@ -1,0 +1,65 @@
+/* pages/myaccount/myaccount.wxss */
+.moneypic image{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 auto;
+}
+.comDeil{
+  display:flex;
+  justify-content: space-between;  padding:0 36rpx;
+}
+
+.commission{
+  font-size: 32rpx;
+  color: #333;
+  margin: 0 auto;
+  padding: 30rpx 0;
+  font-family: 'pingfang';
+}
+.priceses text:first-child{
+  font-size: 48rpx;
+  color: #333;
+}
+.priceses text:last-child{
+  font-size: 72rpx;
+  color: #303030;
+}
+.btns{
+  padding: 0 30rpx;
+}
+.btns button{
+  width: 100%;
+  height: 80rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+.btns button:first-child{
+  color: #fff;
+  background: #ff9812;
+}
+.btns button:last-child{
+  color: #ff9812;
+  background: #f8f8f8;
+  border: 1rpx solid #ff9812;
+  margin-top: 30rpx;
+}
+.moneypic{
+  text-align: center;
+  padding-top: 80rpx;
+}
+.priceses,
+.commission{
+  text-align: center;
+}
+.priceses{
+  margin-bottom: 80rpx;
+}
+.tips{
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 30rpx;
+}

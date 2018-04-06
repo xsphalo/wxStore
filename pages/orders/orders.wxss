@@ -1,0 +1,241 @@
+/* pages/orders/orders.wxss */
+
+.allpage {
+  padding-top: 90rpx;
+}
+
+.ordertop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.ordertop .topitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 90rpx;
+}
+
+.ordertop .topitem view {
+  margin: 0;
+}
+
+.ordertop .topitem view:nth-child(3), .ordertop .topitem view:nth-child(1) {
+  width: 90rpx;
+  height: 4rpx;
+}
+
+.ordertop .topitem view:nth-child(2) {
+  font-size: 16px;
+  color: #333;
+}
+
+.ordertop .topitem view:nth-child(3) {
+  background: #ff9812;
+  opacity: 0;
+}
+
+.ordertop .active view:nth-child(2) {
+  color: #ff9812;
+}
+
+.ordertop .active view:nth-child(3) {
+  opacity: 1;
+}
+
+.orderdetails {
+  background: #f2f2f2;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 10rpx; 
+}
+
+.orderdetails .oderimg image {
+  width: 190rpx;
+  height: 190rpx;
+}
+
+.odername {
+  width: 310rpx;
+}
+
+.odername text:first-child {
+  font-size: 13px;
+  color: #000;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+.odername text:last-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.odername, .orderprice {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.orderprice {
+  text-align: right;
+}
+
+.orderprice text:first-child {
+  font-size: 14px;
+  color: #000;
+}
+
+.orderprice text:nth-child(2) {
+  font-size: 14px;
+  color: #999;
+  margin: 10rpx 0;
+}
+
+.orderprice text:last-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.odername text
+.oderprice text {
+  display: block;
+}
+
+.henhai image {
+  width: 13rpx;
+  height: 22rpx;
+}
+
+.henhai view {
+  font-size: 14px;
+  color: #666;
+}
+
+.daifua {
+  font-size: 13px;
+  color: #1aad19;
+}
+
+.haime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 80rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.henhai {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  padding-right: 0;
+  padding-left: 90rpx;
+}
+
+.henhai view {
+  margin-right: 10rpx;
+}
+
+.paying {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding-right: 20rpx;
+  text-align: right;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.paying view {
+  color: #333;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.paying view:first-child {
+  margin-right: 10rpx;
+}
+
+.paying view text {
+  font-size: 16px;
+}
+
+.fukuan {
+  padding-right: 20rpx;
+  background: #fff;
+  height: 90rpx;
+  text-align: right;
+  line-height: 110rpx;
+}
+
+.fukuan view {
+  display: inline-block;
+  height: 50rpx;
+}
+
+/* .fukuan .quxiao{
+  margin-right: 20rpx;
+} */
+
+.fukuan .quxiao button {
+  width: 150rpx;
+  height: 50rpx;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  padding: 0;
+  line-height: 50rpx;
+  border: 1rpx solid #e6e6e6;
+}
+
+.fukuan .payed button {
+  width: 150rpx;
+  height: 50rpx;
+  background: #fff;
+  color: #1aad19;
+  font-size: 14px;
+  padding: 0;
+  line-height: 50rpx;
+  border: 1rpx solid #e6e6e6;
+}
+
+.headesel .hed.actived text {
+  color: #ffbb38;
+}
+
+.fukuan view {
+  margin-left: 20rpx;
+}
+
+.refunds {
+  margin: 0;
+  background: #fff;
+  border: 1rpx solid #e6e6e6;
+  width: 150rpx;
+  height: 50rpx;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 50rpx;
+  padding: 0;
+  margin-top: 40rpx;
+}
+.refundstext{
+  color: #ff5858 !important;
+  display: inline-block;
+  margin-top: 40rpx;
+}

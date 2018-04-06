@@ -1,0 +1,7 @@
+<!--pages/remarks/remarks.wxml-->
+<view class='allpage'>
+  <textarea placeholder='请输入相关问题的描述' auto-focus="{{tfocus}}" show-confirm-bar="{{noplete}}" bindinput='setmarks' value="{{remarks}}"></textarea>
+  <view class='confirm'>
+    <button type='button' bindtap='toback'>确定</button>
+  </view>
+</view>

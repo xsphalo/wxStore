@@ -1,0 +1,43 @@
+<!--shake.wxml-->
+<template name="cart">
+  <view class='shade' style="display:{{screenType?'block':'none'}}"></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='produsdetail'>
+      <view class='close' bindtap='hideshade'>
+        <image src="/images/btnclo.png"></image>
+      </view>
+      <view class='detaname'>
+        <view class='picbg'>
+          <image src="{{imgurl+prodetail.mphoto}}"></image>
+        </view>
+        <view class='promsgs'>
+          <view>￥{{proprice}}</view>
+        </view>
+      </view>
+      <view class='detaguige' wx:if="{{prodetail.spec.length>0 && prodetail.isspec==1}}">
+        <view class='guige' wx:for="{{prodetail.spec}}" wx:key="keys">
+          <view class='rigts'>选择{{item.title}}：</view>
+          <view class='btbns'>
+            <block wx:for='{{item.items}}' wx:key='id' wx:for-item="items" wx:for-index="idxs">
+              <button bindtap='selSpec' data-id='{{items.id}}' data-idxs="{{idxs}}" class="{{idxArr[index] == items.id?'btncolor':''}}" data-index="{{index}}">{{items.title}}</button>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class='detanumber'>
+        <view class='numb'>购买数量：</view>
+        <view class='plus' bindtap="minusCount" data-index="{{index}}" style="background:{{cant?'#eee':'#f3f3f3'}}">
+          <image src="/images/decad.png"></image>
+        </view>
+        <view class='nums'>{{counts}}</view>
+        <view class='deca' bindtap="addCount" data-index="{{index}}">
+          <image src="/images/plus.png"></image>
+        </view>
+      </view>
+      <view class='paysel halfwid'>
+        <button type="button" hover-class='hoverd' bindtap='confirms'>确定</button>
+      </view>
+    </view>
+  
+  </view>
+</template>

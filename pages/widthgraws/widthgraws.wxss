@@ -1,0 +1,104 @@
+/* pages/withgraws/widthgraws.wxss */
+.allpage{
+  padding-top: 20rpx;
+  height: 100%;
+  background: #f2f2f2;
+}
+.cashed{
+  background: #fff;
+  height: 130rpx;
+  padding: 0 20rpx;
+  padding-top: 10rpx;
+}
+.cashed view:first-child{
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+}
+.edu{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: .5px solid #e6e6e6;
+  /* padding-bottom: 10rpx; */
+}
+.edu text{
+  font-size: 28px;
+  color: #333;
+  font-weight: normal;
+  text-align: left;
+}
+.edu input{
+  width: 400rpx;
+  margin-left: 15rpx;
+  font-size: 28px;
+  color: #333;
+}
+.canti{
+  background: #fff;
+  height: 60rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10rpx;
+}
+.canti text{
+  display: block;
+}
+.canti text:first-child{
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  margin-right: 10rpx;
+}
+.canti text:last-child{
+  font-size: 18px;
+  color: #ff3d3d;
+  font-weight: normal;
+}
+.chargemsg{
+  background: #fff;
+  margin-top: 20rpx;
+}
+.iptin{
+  color: #333;
+  height: 90rpx;
+  background: #fff;
+  border-bottom: .5px solid #e6e6e6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.iptin text{
+  display: block;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  width: 160rpx;
+  text-align: center;
+  margin-right: 18rpx;
+}
+.iptin input{
+  background: #fff;
+  border: 0;
+  height: 90rpx;
+  width: 400rpx;
+  color: #333;
+}
+.tixian{
+  margin-top: 70rpx;
+}
+.tixian button{
+  background: #ff9812;
+  width: 710rpx;
+  height: 90rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+}
+.places{
+  font-size: 16px;
+  color: #ccc;
+  font-weight: normal;
+}

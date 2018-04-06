@@ -1,0 +1,104 @@
+/* pages/shouhoulist/shouhoulist.wxss */
+
+.producmsg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.products {
+  height: 160rpx;
+  padding: 0 10rpx;
+}
+
+.products image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.prodeat {
+  width: 480rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.prodeat .procart image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.prodea-msg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.prodea-msg view:first-child {
+  font-size: 14px;
+  color: #333;
+  text-overflow: ellipsis;
+  /* display: -webkit-box;  *//* -webkit-line-clamp: 2; *//* -webkit-box-orient: vertical; */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.prodea-msg view:last-child {
+  font-size: 16px;
+  color: #ff4426;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* display: -webkit-box;   *//* -webkit-line-clamp: 2; *//* -webkit-box-orient: vertical; */
+}
+
+.prodea-msg view:nth-child(2) {
+  font-size: 10px;
+  color: #999;
+}
+
+.produs {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 180rpx;
+  margin-top: 20rpx;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counts image {
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+}
+
+.counts text {
+  width: 45rpx;
+  text-align: center;
+  font-size: 18px;
+  color: #ff9812;
+  display: block;
+  margin: 0 20rpx;
+}
+.satusx{
+  height: 65rpx;
+  background: #fff;
+  font-size: 30rpx;
+  color: #333;
+  text-align: right;
+  padding: 0 20rpx;
+  border-top: 1rpx solid #e6e6e6;
+  line-height: 65rpx;
+}

@@ -1,0 +1,75 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<view class='allpage'>
+  <form bindsubmit="formSubmit">
+    <view class='products' wx:for="{{goodslists}}" wx:for-item="item" wx:key="keys">
+      <view class='producmsg'>
+        <image src="{{imgurl+item.goods.mphoto}}"></image>
+        <view class='prodeat'>
+          <view class='prodea-msg'>
+            <view>{{item.goods.title}}</view>
+            <view class='guige' wx:if="{{item.goods.isspec == 1}}">规格:{{item.option.title}}</view>
+            <view wx:if="{{item.goods.isspec==1}}">￥{{item.option.saleprice}}
+            </view>
+            <view wx:else>￥{{item.goods.saleprice}}
+            </view>
+          </view>
+        </view>
+        <view class='numbers'>x{{item.counts}}</view>
+      </view>
+    </view>
+    <view class='canju yoouhui' bindtap="toaddress">
+      <view class='padju'>
+        <view class='shous'>收货地址:
+          <text wx:if="{{ifadress}}">{{address.area.gname+address.area.pname+address.area.name+address.address}}</text>
+          <text wx:if="{{!ifadress}}">请选择地址</text>
+        </view>
+        <view>
+          <view class='rightos'>
+            <text>请选择</text>
+            <image src="/images/righto.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='canju'>
+      <view class='padju peisong'>
+        <view>配送费用：</view>
+        <view>￥{{expressprice}}</view>
+      </view>
+    </view>
+    <view class='canju yoouhui' bindtap="cardList">
+      <view class='padju'>
+        <view>使用优惠券：</view>
+        <view class='rightos'>
+          <text>{{text}}</text>
+          <image src="/images/righto.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class='canju'>
+      <view class='padju yihouhui'>
+        <view>已优惠：</view>
+        <view>-￥{{reduce}}</view>
+      </view>
+    </view>
+    <navigator url='/pages/remarks/remarks' hover-class='none'>
+      <view class='beizhu'>
+        <view>添加备注：</view>
+        <view class='rightos'>
+          <text wx:if="{{noremark}}">请填写留言</text>
+          <text wx:else>{{remarks}}</text>
+          <image src="/images/righto.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class='tidan'>
+      <view>
+        <view class='pricesa'>
+          <text>￥</text>
+          <text>{{(ototal-mreduce-reduce)}}</text>
+        </view>
+      </view>
+      <button type='button' bindtap="create">提交订单</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/shoplist/shoplist.wxml-->
+<import src="/dist/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar,rlen:rlen}}" />
+<import src="/dist/notice/notice.wxml" />
+<template is="notice" data="{{notice:notice,hide:hide,animshow:animshow}}" />
+<view class='allpage'>
+  <block wx:if="{{hasList}}">
+    <view class='shophead'>
+      <checkbox-group bindchange="checkboxChange">
+        <icon wx:if="{{selectAllStatus}}" type="success" color="#ff9812" bindtap="selectAll" />
+        <icon wx:else type="circle" bindtap="selectAll" />
+        <text>全选</text>
+      </checkbox-group>
+      <view></view>
+      <view bindtap='bianji' class='bianji'>{{opacontent}}</view>
+    </view>
+    <view class='produs' wx:for="{{carts}}" wx:key="nius" wx:for-item="item">
+      <checkbox-group bindchange="checkboxChanges" data-index="{{index}}">
+        <icon wx:if="{{item.selected}}" type="success" color="#ff9812" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+      </checkbox-group>
+      <view class='products'>
+        <view class='producmsg'>
+          <image src="{{imgurl+item.goods.mphoto}}"></image>
+          <view class='prodeat'>
+            <view class='prodea-msg'>
+              <view>{{item.goods.title}}</view>
+              <view wx:if="{{item.goods.isspec == 1}}">规格：{{item.option.title}}</view>
+              <view class='priceopt'>
+                <view wx:if="{{item.goods.isspec==1}}">￥{{item.option.saleprice}}</view>
+                <view wx:else>￥{{item.goods.saleprice}}</view>
+                <view class='counts'>
+                  <image src="{{jians}}" bindtap="minusCount" data-index="{{index}}" wx:if="{{condition}}"></image>
+                  <text><block wx:if="{{!condition}}">x</block>{{item.counts}}</text>
+                  <image src="/images/jias.png" bindtap="addCount" data-index="{{index}}" wx:if="{{condition}}"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='nomore' wx:if="{{!hasmore}}">没有更多商品了</view>
+    <view class='confirms'>
+      <view class='conumbers'>
+        <view class='pride'>
+          <text>￥</text>
+          <text>{{totalPrice}}</text>
+        </view>
+        <view>共选择{{totalpro}}件商品</view>
+      </view>
+      <button type='button' bindtap='buy'>去结算</button>
+    </view>
+    <view class='delets' wx:if="{{condition}}">
+      <button type='button' bindtap='delets'>删除</button>
+    </view>
+    <view class='shade' style="display:{{screenType?'block':'none'}}"></view>
+    <view class="flowarea" style="display:{{screenType?'block':'none'}}">
+      <view class='confirmdelet'>
+        <view>确认将这{{totalpro}}个商品删除吗？</view>
+        <view class='choice'>
+          <view>
+            <button type='button' bindtap='hideshade'>取消</button>
+          </view>
+          <view>
+            <button type='button' bindtap='deleteList'>确认</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{!hasList}}">
+    <view class='bgcol'>
+      <image src="/images/cartlist.png"></image>
+      <text>购物车里还没有商品</text>
+    </view>
+  </block>
+</view>

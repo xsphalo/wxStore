@@ -1,0 +1,186 @@
+/* pages/coupon/coupon.wxss */
+.allpage{
+  padding-top: 90rpx;
+}
+.headesel {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.cardstop{
+  font-size: 32rpx;
+  color: #ff9812;
+}
+.headesel view.hed text {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 5rpx;
+}
+
+.headesel view.hed {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.botline {
+  background: #ff9812;
+  width: 26rpx;
+  height: 6rpx;
+  border-radius: 3px 3px;
+  opacity: 0;
+}
+.actived .botline{
+  opacity: 1;
+}
+.coupons {
+  height: 100%;
+  padding: 20rpx;
+}
+
+.coupuse {
+  margin-bottom: 20rpx;
+  width: 670rpx;
+  height: 200rpx;
+  background: #ff9812;
+  border-radius: 5px;
+  padding: 0 20rpx;
+  padding-top: 40rpx;
+}
+
+.youhuitop {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 20rpx;
+  padding-left: 30rpx;
+  margin-bottom: 80rpx;
+}
+
+.coup {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.prices {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  right: 230rpx;
+  top: 26rpx;
+}
+
+.juan {
+  text-align: right;
+}
+
+.juan view {
+  color: #fff;
+}
+
+.juan view:first-child {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.juan view:last-child {
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+.botompon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botompon view:first-child {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.botompon view:last-child {
+  font-size: 26rpx;
+  color: #fff;
+}
+.headesel .hed.actived text{
+  color: #ff9812;
+}
+.nocoup{
+  font-size: 22rpx;
+  color: #ff5858;
+  height: 60rpx;
+  padding: 0 5rpx;
+  border-radius: 5rpx;
+  line-height: 60rpx;
+  text-align: center;
+  position: fixed;
+  right: 20rpx;
+  top: 12rpx;
+  z-index: 99999;
+  border: 1rpx solid #ff5858;
+}
+/* ..........阴影.... */
+
+.shade {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particulars {
+  height: 250rpx;
+  width: 420rpx;
+  border: 0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 46%;
+  left: 22%;
+  border-radius: 10px;
+}
+
+.product-img {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-img text {
+  display: block;
+  font-size: 16px;
+  color: #666;
+}
+
+.product-img .imgbg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.bgcol{
+  background: #ff5858;
+  color: #fff;
+}

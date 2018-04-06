@@ -1,0 +1,59 @@
+<!--pages/categories/categories.wxml-->
+<import src="/dist/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar,rlen:rlen}}" />
+<import src="/dist/notice/notice.wxml" />
+<template is="notice" data="{{notice:notice,hide:hide,animshow:animshow}}" />
+<view class='allpage'>
+  <view class='searchs'>
+    <image src="/images/plusicon.png"></image>
+    <input type='text' placeholder='请输入要查找的商品' placeholder-class='placeclass' name='title' bindtap='toallshop' disabled='true'></input>
+  </view>
+  <view class='categories'>
+    <scroll-view class='leftcate' scroll-y>
+      <block wx:for="{{categories}}" wx:key='keys' wx:for-index="index">
+        <view class="leftcate-item {{idx == index?'active':''}}" data-title="{{item.title}}" data-index="{{index}}" bindtap='catechange' data-id="x{{item.id}}">
+          <image src="{{imgurl+item.thumb}}"></image>
+          <view>{{item.title}}</view>
+        </view>
+      </block>
+    </scroll-view>
+     <scroll-view class='rightcate' scroll-y style="height:{{winHeight-70}}px" scroll-into-view="{{scrollTopId}}" scroll-top="{{scrollTop}}" scroll-with-animation="true"  bindscroll="scroll"> 
+    <!-- <view class='rightcate'> -->
+      <block wx:for="{{categories}}" wx:key="keys">
+        <view class='contenthead' id="x{{item.id}}">
+          <view></view>
+          <view>{{item.title}}</view>
+          <view></view>
+        </view>
+        <view class='contens'>
+          <view class='showpro' wx:for="{{item.children}}" wx:for-item="goods" wx:key="{{goods.id}}" wx:for-index="idx">
+            <image src="{{imgurl+goods.thumb}}" data-id="{{goods.id}}" bindtap='catetiers' data-title="{{goods.title}}"></image>
+            <view>{{goods.title}}</view>
+          </view>
+        </view>
+      </block>
+      <!-- <view class='nomore'>没有更多数据了</view> -->
+      <!-- </view> -->
+     </scroll-view> 
+  </view>
+  <!-- <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='sheethead'>
+      <view></view>
+      <view>价格大比拼</view>
+      <image src="/images/close.png" bindtap='hideshade'></image>
+    </view>
+    <view class="content borderbot">
+      <view>哆推推</view>
+      <view>￥{{duosaleprice}}</view>
+    </view>
+    <view class='bijias borderbot'>
+      <view>淘宝价 ￥{{tbprice}}</view>
+      <button type='button'>复制链接</button>
+    </view>
+    <view class='bijias borderbot'>
+      <view>京东价 ￥{{jdprice}}</view>
+      <button type='button'>复制链接</button>
+    </view>
+  </view> -->
+</view>

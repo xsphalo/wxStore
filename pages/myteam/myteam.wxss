@@ -1,0 +1,62 @@
+/* pages/myteam/myteam.wxss */
+.allpage{
+  padding-top: 90rpx;
+}
+.tophead{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.members{
+  font-size: 30rpx;
+  color: #333;
+}
+.lines{
+  background: #ff9812;
+  width: 116rpx;
+  height: 4rpx;
+  opacity: 0;
+}
+.active .members{
+  color: #ff9812
+}
+.active .lines{
+  opacity: 1;
+}
+.items{
+  height: 90rpx;
+}
+.vips{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  height: 130rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.vipname{
+  font-size: 26rpx;
+  color: #666;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.chacter{
+  font-size: 26rpx;
+  color: #ff9812;
+}

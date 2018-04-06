@@ -1,0 +1,20 @@
+<!--pages/transoprt/transoprt.wxml-->
+<view class='allpage'>
+  <view class='transtop'>
+    <view>物流信息：{{express.expName}}</view>
+    <view>物流单号：{{express.expressno}}</view>
+  </view>
+  <view class='divs'></view>
+  <view class='blocks'>
+    <view class='transprogress' wx:for="{{express.list}}" wx:key="keys">
+      <view class='lefts'>
+        <image src="{{index !==0?progress:unprogress}}" data-index="{{index}}" class="{{index !==0?'':'wider'}}"></image>
+        <view class='lines'></view>
+      </view>
+      <view class='rights'>
+        <view>{{item.status}}</view>
+        <view>{{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>

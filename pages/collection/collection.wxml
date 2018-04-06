@@ -1,0 +1,22 @@
+<!--pages/collection/collection.wxml-->
+<view class='allpage'>
+  <view class="item-wrapper">
+    <view class='upwrap' wx:for="{{likelist}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+      <view class="item-list">
+        <view class="item-info" data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="left:{{item.left + 'rpx'}}">
+          <image class="info-img" src="{{imgurl+item.goods.mphoto}}"></image>
+          <view class="info-wrapper">
+            <view class="info-desc">
+              <view class="name">{{item.goods.title}}</view>
+            </view>
+            <view class="info-content">￥{{item.goods.saleprice}}</view>
+          </view>
+        </view>
+        <view class="item-oper">
+          <view class="oper-delete" bindtap="itemDelete" data-index="{{index}}" data-gid="{{item.gid}}">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='nomore' wx:if="{{!hasmore}}">没有更多了</view>
+</view>

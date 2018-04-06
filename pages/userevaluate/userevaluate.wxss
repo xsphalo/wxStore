@@ -1,0 +1,221 @@
+/* pages/userevaluate/userevaluate.wxss */
+.evalu{
+  height: 80rpx;
+  color: #666;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e6e6e6;
+  line-height: 80rpx;
+}
+.usernames{
+  background: #fff;
+  padding: 0 20rpx;
+}
+.evalus{
+  font-size: 26rpx;
+  color: #333;
+}
+.names{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.names view:first-child{
+  color: #333;
+  font-size: 26rpx;
+}
+.names view:last-child{
+  color: #999;
+  font-size: 24rpx;
+}
+.propic{
+  display: flex;
+  justify-content: flex-start;
+  padding: 10rpx 0 20rpx 0;
+}
+.propic image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 10rpx;
+}
+.commitsraea {
+  background: #fff;
+  padding: 0 20rpx;
+}
+
+.comitsa {
+  text-align: left;
+  /* padding: 0 20rpx; */
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.comitsa text:first-child {
+  width: 6rpx;
+  height: 28rpx;
+  background: #ff9812;
+  margin-right: 10rpx;
+  display: block;
+}
+
+.comitsa text:last-child {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+/* ...............评分....... */
+
+.comment1-description .star-pos .hideStar {
+  z-index: 2;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F.png");
+  /* width: 83rpx; */
+  height: 20rpx;
+  background-size: 20rpx 20rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.starsM {
+  z-index: 1;
+  width: 20rpx;
+  height: 20rpx;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F%E9%80%89%E4%B8%AD.png");
+  background-size: 20rpx 20rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* pingfen end */
+
+.caad image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.pingjia {
+  padding: 0 30rpx;
+}
+
+.pade {
+  padding: 0 30rpx;
+}
+
+.pingjia label {
+  font-size: 12px;
+  color: #333;
+}
+
+.comment1-description {
+  margin-top: 10rpx;
+}
+
+.prostar .pinfont {
+  color: #333;
+  font-size: 14px;
+}
+
+.prostar {
+  padding-top: 10rpx;
+}
+
+.comitsfont {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.comitsfont view {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  line-height: 36rpx;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.commitsimg {
+  padding-bottom: 10rpx;
+}
+
+.commitsimg image {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.comitime {
+  font-size: 14px;
+  color: #333;
+}
+
+.linflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.lines{
+  width: 120rpx;
+  height: 1rpx;
+  background: #999;
+}
+.addresnai{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx 110rpx 0;
+}
+.addresnai view:nth-child(2){
+  color: #999;
+  font-size: 16px;
+}
+
+.kefuhui{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+.kefuhui image{
+  width: 16rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+.kefuhui view{
+  font-size: 14px;
+  color: #333;
+  line-height: 36rpx;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.avtar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.membermsg{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

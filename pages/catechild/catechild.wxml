@@ -1,0 +1,54 @@
+<!--pages/catechild/catechild.wxml-->
+<view class='allpage' style="padding-top:{{!fihead?'20rpx':'100rpx'}}">
+  <scroll-view scroll-x wx:if="{{fihead}}">
+    <view class='findhead'>
+      <!-- <view class='slideitem'> -->
+      <view class="hse {{cid==pid?'active':''}}" data-id='{{pid}}' bindtap="category">
+        <text>全部</text>
+        <text class='botline'></text>
+      </view>
+      <!-- </view> -->
+      <block wx:for='{{catelist}}' wx:key='key'>
+        <!-- <view class='slideitem'> -->
+        <view class="hse {{cid==item.id?'active':''}}" data-id='{{item.id}}' bindtap="category">
+          <text>{{item.title}}</text>
+          <text class='botline'></text>
+        </view>
+        <!-- </view> -->
+      </block>
+    </view>
+  </scroll-view>
+  <view class='prolists'>
+    <view class='prolist-item' wx:for="{{goodslist}}" wx:key="keys">
+      <image src="{{imgurl+item.mphoto}}" data-id="{{item.id}}" bindtap='todetail'></image>
+      <view class='proname'>{{item.title}}</view>
+      <view class='botmsg'>
+        <view class='prices'>￥{{item.saleprice}}</view>
+        <image src="/images/bijia.png" bindtap='bijia' data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class='nomore' wx:if="{{!hasmore}}">扯啥呢，没有啦</view>
+  <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='sheethead'>
+      <view>{{protitle}}</view>
+      <view>价格大比拼</view>
+      <image src="/images/close.png" bindtap='hideshade'></image>
+    </view>
+    <view class="content borderbot">
+      <view>{{protitle}}</view>
+      <view>￥{{duosaleprice}}</view>
+    </view>
+    <view class='bijias borderbot'>
+      <view>淘宝价 ￥{{tbprice}}</view>
+      <text selectable="true" class='linksa'>{{tblink}}</text>
+      <button type='button' bindtap="copyTB">复制链接</button>
+    </view>
+    <view class='bijias borderbot'>
+      <view>京东价 ￥{{jdprice}}</view>
+      <text selectable="true" class='linksa'>{{jdlink}}123</text>
+      <button type='button' bindtap="copyJD">复制链接</button>
+    </view>
+  </view>
+</view>

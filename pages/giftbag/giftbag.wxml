@@ -1,0 +1,15 @@
+<!--pages/giftbag/giftbag.wxml-->
+<view class='allpage'>
+  <image src="{{imgurl+bgpic}}" class='bigpic'></image>
+  <view class='headtitle'>买创业礼包，升VIP会员</view>
+  <view class='enlish'>ENTREPRENEURIAL GIFT BAG</view>
+  <view class='bagitem' wx:for="{{baglists}}" wx:key="keys">
+    <image src="{{imgurl+item.mphoto}}"></image>
+    <view class='theright'>
+      <view class='bagname'>{{item.title}}</view>
+      <view class='prices'>￥{{item.saleprice}}</view>
+      <button type='button' class='btns' data-id="{{item.id}}" bindtap='todetail'>立即购买</button>
+    </view>
+  </view>
+  <view class='nomore'>没有礼包了</view>
+</view>

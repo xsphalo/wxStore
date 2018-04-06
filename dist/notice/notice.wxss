@@ -1,0 +1,53 @@
+/* dist/notice/notice.wxss */
+.notice-container{
+  position: fixed;
+  top:100rpx;
+  left:20rpx;
+  z-index: 999;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: 60rpx;
+  display: flex;
+}
+.notice-container.hide{
+  display: none;
+}
+.notice-container .avatar{
+  height: 50rpx;
+  width: 50rpx;
+  padding: 5rpx;
+}
+.notice-container .avatar image{
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+  /* margin-top: 10rpx; */
+}
+.notice-container .notice-text{
+  color:#fff;
+  font-size: 24rpx;
+  padding-right: 10rpx;
+}
+.anim-show{animation:1s animshow 0s infinite; -webkit-animation: 1s animshow 0s;}
+@keyframes animshow{
+    0%{opacity:0}
+    50%{opacity:0.3}
+    100%{opacity:0.5;}
+}
+@-webkit-keyframes animshow{
+    0%{opacity:0}
+    50%{opacity:0.3}
+    100%{opacity:0.5;}
+}
+.anim-hide{animation:1s animhide 0s infinite; -webkit-animation: 1s animhide 0s;}
+@keyframes animhide{
+    0%{opacity:0.5}
+    50%{opacity:0.3}
+    100%{opacity:0;}
+}
+@-webkit-keyframes animhide{
+    0%{opacity:0.5}
+    50%{opacity:0.3}
+    100%{opacity:0;}
+}

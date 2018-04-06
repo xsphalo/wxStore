@@ -1,0 +1,54 @@
+<!--pages/addreset/addreset.wxml-->
+<view class='allpage'>
+  <form bindsubmit="formSubmit">
+    <view class='inputmsg'>
+      <view class='borderbot'>
+        <view class='fromfont'>收货人</view>
+        <input type="text" placeholder='请输入收货人姓名' name="receiver" bindchange='name' value="{{addetail.receiver}}"></input>
+      </view>
+    </view>
+    <view class='inputmsg'>
+      <view class='borderbot'>
+        <view class='fromfont'>联系电话</view>
+        <input type="number" placeholder='请输入11位手机号码' name="mobile" bindchange="mobile" value="{{addetail.mobile}}"></input>
+      </view>
+    </view>
+    <view class='inputmsg'>
+      <view class='borderbot'>
+        <view class='fromfont'>选择区域</view>
+        <view class='current'>{{country}}</view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+      <view class="picker" wx:if="{{hasadress}}">
+        {{multiArray[0][multiIndex[0]].name}}{{multiArray[1][multiIndex[1]].name}}{{multiArray[2][multiIndex[2]].name}}
+      </view>
+      <view class='picker' wx:if="{{!hasadress}}">请选择地址</view>
+      <!-- <view class='picker' wx:if="{{!hasdetail}}">{{addetail.area.gname+addetail.area.pname+addetail.area.name+addetail.address}}</view> -->
+    </picker>
+      </view>
+    </view>
+    <view class='inputmsg'>
+      <view class='borderbot'>
+        <view class='fromfont'>详细地址</view>
+        <input type="text" placeholder='请输入街道门牌号' name="address" bindchange="address" value="{{addetail.address}}"></input>
+      </view>
+    </view>
+    <view class='inputmsg'>
+      <view class='borderbots'>
+        <view class='fromfonts'>设为默认地址</view>
+        <view class="body-view">
+          <switch bindchange="setDefaultAddress"/>
+        </view>
+      </view>
+    </view>
+    <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+    <view class="particulars" style="display:{{screenType?'block':'none'}}">
+      <view class='product-img'>
+        <image src="/images/sucess.png" class='imgbg'></image>
+        <text>地址设置成功</text>
+      </view>
+    </view>
+    <view class='confirmsbtn'>
+      <button type='button' hover-class='hovered' formType="submit">确认保存</button>
+    </view>
+  </form>
+</view>

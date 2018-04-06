@@ -1,0 +1,163 @@
+/* pages/custerservice/custerservice.wxss */
+
+.servicepro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+}
+
+.servicepro image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+
+.midle {
+  width: 460rpx;
+}
+
+.prices text:first-child {
+  font-size: 30rpx;
+  color: #f92e27;
+  font-weight: bold;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.prices text:last-child {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.spec {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.proname {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.numbers {
+  font-size: 30rpx;
+  color: #666;
+}
+.servicechoice{
+  padding: 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.btns {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.servicechoice view:first-child{
+  font-size: 30rpx;
+  color: #333;
+}
+.btns button {
+  height: 40rpx;
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 5rpx;
+  padding: 0;
+  margin: 0;
+}
+.btns button:first-child{
+  background: #ff9812;
+  width: 120rpx;
+  margin-right: 20rpx;
+}
+.btns button:last-child{
+  background: #999;
+  width: 150rpx;
+}
+
+
+
+/* ....................... */
+.pade{
+  margin-top: 20rpx;
+}
+.evaluations{
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.evaluations textarea{
+  font-size: 28rpx;
+  color: #333;
+  padding: 20rpx;
+  width: 670rpx;
+  height: 200rpx;
+  background:#f8f8f8;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.producmsg{
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20rpx;
+  /* position: relative */
+}
+.producmsg image{
+  margin-right: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.prostar .pinfont{
+  font-size: 16px;
+  color: #333;
+}
+.prostar input{
+  display: none;
+}
+
+
+/* pingfen end */
+.caad image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.pingjia{
+  padding:0 30rpx;
+}
+
+.pingjia label{
+  font-size: 12px;
+  color: #333;
+}
+.modei{
+  font-size: 30rpx;
+  color: #333;
+}
+.confirms{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.confirms button{
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 98rpx;
+  height: 98rpx;
+  background: #ff9812;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}

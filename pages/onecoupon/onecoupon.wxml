@@ -1,0 +1,21 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='allpage'>
+  <view class='headesel'>
+    <view class='cardstop'>可用优惠券</view>
+    <view class="nocoup {{nocoup?'bgcol':''}}" bindtap='nocoupons'>不使用优惠券</view>
+  </view>
+  <view class='coupons' wx:for="{{coupons}}" wx:key="keys">
+    <view class='coupuse' data-index="{{index}}" bindtap='seleccards'>
+      <view class='youhuitop'>
+        <view class='coup'>{{item.coupon.title}}</view>
+        <view class='juan'>
+          <view>优惠券</view>
+        </view>
+      </view>
+      <view class='botompon'>
+        <view>使用期限：{{item.expired_at}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='nomore'>没有更多优惠券了</view>
+</view>

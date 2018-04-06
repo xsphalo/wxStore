@@ -1,0 +1,8 @@
+<!--dist/share/share.wxml-->
+<template name="share">
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <action-sheet-item bindtap="share"><button open-type="share" class='share-btn' hover-class='none'>{{direct}}</button></action-sheet-item>
+    <action-sheet-item bindtap="save">{{save}}</action-sheet-item>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+</template>

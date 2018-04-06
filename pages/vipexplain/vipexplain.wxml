@@ -1,0 +1,12 @@
+<!--pages/vipexplain/vipexplain.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='allpage'>
+  <block wx:if="{{hasmsg}}">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </block>
+  <view class='addresnai' wx:if="{{!hasmsg}}">
+    <view class='lines'></view>
+    <view>暂无特权说明</view>
+    <view class='lines'></view>
+  </view>
+</view>

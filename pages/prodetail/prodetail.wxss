@@ -1,0 +1,592 @@
+/* pages/prodetail/prodetail.wxss */
+@import '/dist/index.wxss';
+.allpage {
+  height: 100%;
+}
+
+.bgpic {
+  height: 500rpx;
+}
+
+.bgpic image {
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.promsg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  background: #fff;
+  height: 110rpx;
+}
+
+.promsg .proprice view text:first-child {
+  font-size: 36rpx;
+  color: #ff5858;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.promsg .proprice view text:last-child {
+  font-size: 24rpx;
+  color: #999;
+  font-weight: 500;
+}
+
+.promsg .proprice text:first-child {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+  width: 600rpx;
+  display: inline-block;
+}
+
+.shares {
+  line-height: 1.2;
+}
+
+.promsg .shares image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.promsg .shares text {
+  font-size: 10px;
+  color: #333;
+  display: block;
+}
+
+button.shares {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 0;
+  position: absolute;
+  right: 10rpx;
+}
+
+button.shares::after {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.commitsraea {
+  background: #fff;
+  padding: 0 20rpx;
+}
+
+.comitsa {
+  text-align: left;
+  /* padding: 0 20rpx; */
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.comitsa text:first-child {
+  width: 6rpx;
+  height: 28rpx;
+  background: #ff9812;
+  margin-right: 10rpx;
+  display: block;
+}
+
+.comitsa text:last-child {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+/* ...............评分....... */
+
+.comment1-description .star-pos .hideStar {
+  z-index: 2;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F.png");
+  /* width: 83rpx; */
+  height: 20rpx;
+  background-size: 20rpx 20rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.starsM {
+  z-index: 1;
+  width: 20rpx;
+  height: 20rpx;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F%E9%80%89%E4%B8%AD.png");
+  background-size: 20rpx 20rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* pingfen end */
+
+.caad image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.pingjia {
+  padding: 0 30rpx;
+}
+
+.pade {
+  padding: 0 30rpx;
+}
+
+.pingjia label {
+  font-size: 12px;
+  color: #333;
+}
+
+.comment1-description {
+  margin-top: 10rpx;
+}
+
+.prostar .pinfont {
+  color: #333;
+  font-size: 14px;
+}
+
+.prostar {
+  padding-top: 10rpx;
+}
+
+.comitsfont {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.comitsfont view {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  line-height: 36rpx;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.commitsimg {
+  padding-bottom: 10rpx;
+}
+
+.commitsimg image {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+
+.comitime {
+  font-size: 14px;
+  color: #333;
+}
+
+.linflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 
+.evanai {
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.evanai text {
+  font-size: 10px;
+  color: #999;
+} */
+
+.paysel {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 98rpx;
+  display: flex;
+  background: #fff;
+  width: 750rpx;
+  z-index: 999;
+}
+
+.tokefu {
+  width: 122rpx;
+  /* border-right: 1px solid #e6e6e6; */
+  text-align: center;
+  padding-top: 10rpx;
+  outline: none;
+  background: #fff;
+  line-height: 1.2;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toshop {
+  width: 122rpx;
+  text-align: center;
+  padding-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1rpx solid #e6e6e6;
+}
+
+.toshop image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.toshop .coll{
+  width: 42rpx;
+  height: 40rpx;
+}
+.tokefu image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.toshop text, .tokefu text {
+  color: #333;
+  font-size: 10px;
+  display: block;
+  width: 80rpx;
+}
+
+.joincart button {
+  width: 225rpx;
+  background: #ffb54c;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}
+
+.paynow button {
+  width: 225rpx;
+  background: #ff3e3e;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}
+
+.hoverd {
+  opacity: 0.8;
+}
+
+.dispace {
+  height: 110rpx;
+  background: #f2f2f2;
+}
+
+.allpage .commitsraea:last-child .padlr {
+  border-bottom: none;
+}
+
+.sroltop {
+  position: fixed;
+  right: 20rpx;
+  bottom: 120rpx;
+}
+
+.sroltop image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+page {
+  height: 100%;
+}
+
+.detailpro {
+  padding: 20rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.detailpro image {
+  width: 700rpx;
+  height: 500rpx;
+}
+
+swiper, .slide-image {
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.pricesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+
+.theprice {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #ff0028;
+  margin-right: 18rpx;
+}
+.deleft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.salesnum{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.salesnum view{
+  font-size: 20rpx;
+  color: #999;
+}
+.deleft button {
+  font-size: 22rpx;
+  color: #ff9812;
+  font-weight: 500;
+  background: #fff;
+  border: 1rpx solid #ff9812;
+  width: 100rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  padding: 0;
+  margin: 0;
+  border-radius: 19rpx 19rpx;
+}
+
+.pricesa button::after {
+  content: none;
+  border: 0;
+}
+
+.spaecs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  background: #fff;
+  height: 90rpx;
+}
+
+.spaecs view {
+  font-size: 26rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+
+.spaecs image {
+  width: 38rpx;
+  height: 6rpx;
+}
+
+.botbor {
+  padding-left: 20rpx;
+  background: #fff;
+}
+
+.flss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.flss .comitsa {
+  margin-top: 0;
+}
+
+.comm {
+  display: flex;
+  align-items: center;
+}
+
+.comm image {
+  width: 13rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+
+.comm view {
+  font-size: 24rpx;
+  color: #999;
+  letter-spacing: 4rpx;
+}
+.nocom{
+  background: #fff;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.kefuhui{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+.kefuhui image{
+  width: 16rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+.kefuhui view{
+  font-size: 14px;
+  color: #333;
+  line-height: 36rpx;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.avtar{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.membermsg{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+/* .................. */
+
+.shader {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particularsr {
+  width: 480rpx;
+  border: 0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 38%;
+  left: 18%;
+  border-radius: 10px;
+  padding-bottom: 60rpx;
+}
+
+.sheetheads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  background: #ff9812;
+  border-radius: 10rpx 10rpx 0 0;
+  padding: 0 30rpx;
+}
+
+.sheetheads view:first-child {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.sheetheads view {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.sheetheads image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40rpx 0 60rpx 0;
+}
+
+.content view:first-child {
+  font-size: 26rpx;
+  color: #ff9812;
+  text-align: centere;
+}
+
+.content view:last-child {
+  font-size: 36rpx;
+  color: #ff9812;
+  font-weight: bold;
+}
+
+.bijias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+}
+
+.bijias view:first-child {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.bijias button {
+  font-size: 26rpx;
+  color: #ff9812;
+  text-align: center;
+  height: 46rpx;
+  line-height: 46rpx;
+  border: 1rpx solid #ff9812;
+  border-radius: 23rpx 23rpx;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  width: 160rpx;
+}
+
+.bijias button::after {
+  border: 0;
+}
+
+.borderbot {
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.detailpro image{
+  max-width: 100% !important;
+}

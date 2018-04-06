@@ -1,0 +1,31 @@
+/* pages/remarks/remarks.wxss */
+.allpage{
+  height: 100%;
+  padding: 0 20rpx;
+  padding-top: 20rpx;
+}
+.allpage textarea{
+  width: 670rpx;
+  height: 260rpx;
+  background: #fff;
+  padding: 20rpx;
+  color: #333;
+  font-size: 14px;
+}
+.confirm{
+  
+  padding-top: 50rpx;
+  text-align: center;
+}
+.confirm button{
+  background: #ff9812;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 18px;
+  width: 690rpx;
+}

@@ -1,0 +1,282 @@
+/* pages/categories/categories.wxss */
+@import "/dist/tabbar/tabbar.wxss";
+
+/* 
+ .allpage {
+  padding-bottom: 98rpx;
+}  */
+
+.searchs image {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}
+
+.placeclass {
+  color: #aaa;
+  font-size: 26rpx;
+}
+
+.searchs input {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.searchs {
+  background: #fff;
+  height: 60rpx;
+  border-radius: 30rpx 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 710rpx;
+  margin: 20rpx auto;
+}
+
+.leftcate-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 6rpx solid #f8f8f8;
+  box-sizing: border-box;
+}
+
+.leftcate-item image {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 12rpx;
+  filter: grayscale(1);
+}
+
+.leftcate-item view {
+  font-size: 28rpx;
+  color: #555;
+  height: 30rpx;
+  line-height: 30rpx;
+  overflow: hidden;
+  width: 94rpx;
+}
+
+.leftcate {
+  width: 160rpx;
+  height: 1005rpx;
+  background: #f8f8f8;
+}
+
+.rightcate .contens:last-child {
+  margin-bottom: 70rpx;
+}
+.categories {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #ccc;
+}
+
+.leftcate-item {
+  width: 160rpx;
+  height: 90rpx;
+}
+
+.active {
+  border-left: 6rpx solid #ff9812;
+  background: #fff;
+}
+
+.active image {
+  filter: none;
+}
+
+.active view {
+  color: #ff9812;
+}
+
+.contenthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 590rpx;
+  /* margin-top: 30rpx; */
+  padding-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.contenthead view:first-child {
+  width: 120rpx;
+  height: 2rpx;
+  background: #ccc;
+}
+
+.contenthead view:last-child {
+  width: 120rpx;
+  height: 2rpx;
+  background: #ccc;
+}
+
+.contenthead view:nth-child(2) {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 0 20rpx;
+}
+
+.contens {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50rpx;
+}
+
+.showpro {
+  text-align: center;
+  margin-right: 35rpx;
+  margin-bottom: 30rpx;
+  width: 140rpx;
+}
+
+.showpro:nth-child(3n) {
+  margin-right: 0;
+}
+
+.showpro image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.showpro view:nth-child(2) {
+  padding: 0 10rpx;
+  font-size: 22rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.showpro view:nth-child(3) {
+  font-size: 30rpx;
+  color: #f92e27;
+  font-weight: bold;
+  margin: 10rpx auto;
+}
+
+.showpro button {
+  width: 100rpx;
+  height: 38rpx;
+  color: #ff9812;
+  border: 1rpx solid #ff9812;
+  text-align: center;
+  line-height: 38rpx;
+  font-size: 22rpx;
+  border-radius: 19rpx 19rpx;
+  padding: 0;
+  background: #fff;
+}
+
+.showpro button::after {
+  border: 0;
+}
+
+.shade {
+  background-color: #000;
+  position: fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.particulars {
+  width: 480rpx;
+  border: 0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 38%;
+  left: 18%;
+  border-radius: 10px;
+  padding-bottom: 60rpx;
+}
+
+.sheethead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  background: #ff9812;
+  border-radius: 10rpx 10rpx 0 0;
+  padding: 0 30rpx;
+}
+
+.sheethead view:first-child {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.sheethead view {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.sheethead image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40rpx 0 60rpx 0;
+}
+
+.content view:first-child {
+  font-size: 26rpx;
+  color: #ff9812;
+}
+
+.content view:last-child {
+  font-size: 36rpx;
+  color: #ff9812;
+  font-weight: bold;
+}
+
+.bijias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  padding: 0 20rpx;
+}
+
+.bijias view:first-child {
+  font-size: 26rpx;
+  color: #333;
+}
+
+.bijias button {
+  font-size: 26rpx;
+  color: #ff9812;
+  text-align: center;
+  height: 46rpx;
+  line-height: 46rpx;
+  border: 1rpx solid #ff9812;
+  border-radius: 23rpx 23rpx;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  width: 160rpx;
+}
+
+.bijias button::after {
+  border: 0;
+}
+
+.borderbot {
+  border-bottom: 1rpx solid #e6e6e6;
+}

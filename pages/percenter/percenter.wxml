@@ -1,0 +1,146 @@
+<!--pages/percenter/percenter.wxml-->
+<import src="/dist/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar,rlen:rlen}}" />
+<import src="/dist/notice/notice.wxml" />
+<template is="notice" data="{{notice:notice,hide:hide,animshow:animshow}}" />
+<view class='allpage'>
+  <view class='usermsgs'>
+    <view class='userleft'>
+      <image src="{{userpic}}"></image>
+      <text>{{username}}</text>
+      <image class='levles' src="{{imgurl+levelogo}}"></image>
+    </view>
+    <view class='points'>积分：{{wallet5}}</view>
+  </view>
+  <view class='oders'>
+    <view class='ordertop'>
+      <view class='oderleft'>我的订单</view>
+      <view class='editfile'>
+        <navigator url="/pages/orders/orders?status=a" hover-class="none">
+          <text>查看全部</text>
+          <image src="/images/righto.png"></image>
+        </navigator>
+      </view>
+    </view>
+    <view class='orderbottom'>
+      <navigator url="/pages/orders/orders?status=0" hover-class='none'>
+        <view class='conmsg1'>
+          <image src="/images/daifukuan.png"></image>
+          <text>待付款</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=1" hover-class='none'>
+        <view class='conmsg2'>
+          <image src="/images/daifahuo.png"></image>
+          <text>待发货</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=2" hover-class='none'>
+        <view class='conmsg3'>
+          <image src="/images/daishouhuo.png"></image>
+          <text>待收货</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=3" hover-class='none'>
+        <view class='conmsg4'>
+          <image src="/images/daipingjia.png"></image>
+          <text>待评价</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/shouhoulist/shouhoulist" hover-class='none'>
+        <view class='conmsg5'>
+          <image src="/images/tuihuanhuo.png"></image>
+          <text>售后</text>
+        </view>
+      </navigator>
+    </view>
+    <navigator url="/pages/myaccount/myaccount?wallet1={{wallet1}}">
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/zhanghu.png"></image>
+        </view>
+        <view class='rightsmsg'>
+          <text>我的账户</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url='/pages/collection/collection'>
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/shoucang.png"></image>
+        </view>
+        <view class='rightsmsg'>
+          <text>我的收藏</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url='/pages/myteam/myteam'>
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/myteam.png"></image>
+        </view>
+        <view class='rightsmsg'>
+          <text>我的团队</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/coupon/coupon">
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/youhui.png"></image>
+        </view>
+        <view class='rightsmsg nobot'>
+          <text>优惠券</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <!-- <navigator url="/pages/idety/idety"> -->
+    <view class='userlist morhei' bindtap='toidcard'>
+      <view class='qianpic'>
+        <image src="/images/idety.png"></image>
+      </view>
+      <view class='rightsmsg'>
+        <text>身份认证</text>
+        <image src="/images/rights.png"></image>
+      </view>
+    </view>
+    <!-- </navigator> -->
+    <navigator url="/pages/addlist/addlist">
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/dizhi.png"></image>
+        </view>
+        <view class='rightsmsg'>
+          <text>地址管理</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <button type='button' open-type='contact' class='setbtn'>
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/kefu.png"></image>
+        </view>
+        <view class='rightsmsg'>
+          <text>联系客服</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </button>
+    <navigator url="/pages/aboutus/aboutus">
+      <view class='userlist'>
+        <view class='qianpic'>
+          <image src="/images/women.png"></image>
+        </view>
+        <view class='rightsmsg nobot'>
+          <text>关于我们</text>
+          <image src="/images/rights.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,109 @@
+<!--pages/orders/orders.wxml-->
+<view class='allpage'>
+  <view class="ordertop">
+    <view class="topitem {{status=='a'?'active':''}}" bindtap='catetype' data-status='a'>
+      <view></view>
+      <view>全部</view>
+      <view class="lines"></view>
+    </view>
+    <view class="topitem {{status==0?'active':''}}" bindtap='catetype' data-status='0'>
+      <view></view>
+      <view>待付款</view>
+      <view class="lines"></view>
+    </view>
+    <view class="topitem {{status==1?'active':''}}" bindtap='catetype' data-status='1'>
+      <view></view>
+      <view>待发货</view>
+      <view class="lines"></view>
+    </view>
+    <view class="topitem {{status==2?'active':''}}" bindtap='catetype' data-status='2'>
+      <view></view>
+      <view>待收货</view>
+      <view class="lines"></view>
+    </view>
+    <view class="topitem {{status==3?'active':''}}" bindtap='catetype' data-status='3'>
+      <view></view>
+      <view>待评价</view>
+      <view class="lines"></view>
+    </view>
+  </view>
+  <view wx:for="{{orderslist}}" wx:for-item="item" wx:key="keys" style='background:#fff'>
+    <view class='haime'>
+      <view class='daifua'>
+        <block wx:if='{{item.status==0}}'>
+          待付款
+        </block>
+        <block wx:if='{{item.status==1}}'>
+          待发货
+        </block>
+        <block wx:if='{{item.status==2}}'>
+          待收货
+        </block>
+        <block wx:if='{{item.status==3}}'>
+          待评价
+        </block>
+        <block wx:if='{{item.status==6}}'>
+          已完成
+        </block>
+        <block wx:if='{{item.status==4}}'>
+          交易关闭
+        </block>
+        <block wx:if='{{item.status==7}}'>
+          交易关闭
+        </block>
+      </view>
+      <view class='henhai' data-id="{{item.id}}" bindtap='todeatail'>
+        <view>查看详情</view>
+        <image src="/images/righto.png"></image>
+      </view>
+    </view>
+    <block wx:for='{{item.items}}' wx:for-item="iitem" wx:key='iitemk' wx:for-index="idx">
+      <view class='orderdetails'>
+        <view class='oderimg'>
+          <image src="{{imgurl+iitem.goods.mphoto}}"></image>
+        </view>
+        <view class='odername'>
+          <text style='color:#333;'>{{iitem.goods.title}}</text>
+          <text wx:if="{{iitem.option}}">商品规格：{{iitem.option.title}}</text>
+        </view>
+        <view class='orderprice'>
+          <text>￥{{iitem.price}}</text>
+          <text>X{{iitem.counts}}</text>
+          <button type='button' bindtap="tuikuan" wx:if='{{(item.status==1||item.status==2)&& !iitem.refund && iitem.levelup==0}}' data-id="{{iitem.id}}" class='refunds' data-idx="{{idx}}" data-index="{{index}}">退款申请</button>
+          <text wx:if="{{iitem.refund}}" class='refundstext'>{{iitem.refund.status_text}}</text>
+        </view>
+      </view>
+    </block>
+    <view class='paying'>
+      <view>共计{{item.items.length}}件商品</view>
+      <view>合计：￥
+        <text>{{(item.price)}}</text>
+      </view>
+      <view>（包含运费￥{{item.expressprice}}）</view>
+    </view>
+    <view class='fukuan'>
+      <view class='payed'>
+        <button open-type="contact" type="button">联系客服</button>
+      </view>
+      <view class='quxiao' wx:if='{{item.status==0}}' bindtap="cancel" data-id='{{item.id}}' data-index='{{index}}' data-orderno="{{item.orderno}}">
+        <button>取消订单</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==0}}' bindtap="topay" data-id='{{item.id}}' data-idx='{{index}}' data-orderno="{{item.orderno}}">
+        <button>付款</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==2}}' bindtap="finish" data-id="{{item.id}}" data-idx='{{index}}' data-orderno="{{item.orderno}}">
+        <button>确认收货</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==2}}' bindtap="toexpress" data-id="{{item.id}}" data-idx='{{index}}' data-orderno="{{item.orderno}}">
+        <button>查看物流</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==3}}' bindtap="eve" data-id="{{item.id}}" data-index="{{index}}" data-orderno="{{item.orderno}}">
+        <button>评价</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==3||item.status==4||item.status==6||item.status==7}}' bindtap="delets" data-id="{{item.id}}" data-orderno="{{item.orderno}}" data-index="{{index}}">
+        <button>删除订单</button>
+      </view>
+    </view>
+  </view>
+  <view class='nomore' wx:if="{{!hasmore}}">没有更多订单了</view>
+</view>

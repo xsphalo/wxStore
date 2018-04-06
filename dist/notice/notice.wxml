@@ -1,0 +1,7 @@
+<!--dist/notice/notice.wxml-->
+<template name="notice">
+  <view class='notice-container {{hide?"hide":""}}  {{animshow?"anim-show":"anim-hide"}}'>
+    <view class='avatar'><image src='{{notice.avatar}}'></image></view>
+    <view class='notice-text'>{{notice.time}}前来自{{notice.nickname}}的订单</view>
+  </view>
+</template>

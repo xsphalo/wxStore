@@ -1,0 +1,76 @@
+<!--pages/addlist/addlist.wxml-->
+<view class='allpage'>
+  <!-- <view class="item-box" wx:if="{{!noaddress}}">
+    <view class="items">
+      <view wx:for="{{addrelist}}" wx:key="{{index}}" class="item">
+        <view bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{cardTeams[index].right}}rpx" class="inner txt" data-index="{{index}}" bindtap="select" data-id='{{item.id}}' data-areaid="{{item.areaid}}">
+          <view class=''>
+            <checkbox-group>
+                <icon wx:if="{{item.isdefault=='1'}}" type="success" color="#ff9812" bindtap="selectdefat" data-index="{{index}}" />
+                <icon wx:if="{{item.isdefault=='0'}}" type="circle" bindtap="selectdefat" data-index="{{index}}" />
+            </checkbox-group>
+          </view>
+          <view class="adresmag">
+            <view class='usernames'>
+              <text>{{item.receiver}}</text>
+              <text>{{item.mobile}}</text>
+            </view>
+            <view class='adre'>
+              <text wx:if="{{item.isdefault=='1'}}" class='firsts'>[默认]</text>
+              <text class='lasts'>{{item.area.gname}}{{item.area.pname}}{{item.area.name}}{{item.address}}</text>
+            </view>
+          </view>
+          <view data-id='{{item.id}}' bindtap="importid">
+            <image class="item-icon" mode="widthFix" src="{{icon}}"></image>
+          </view>
+        </view>
+        <view data-id="{{item.id}}" bindtap="delItem" class="inner del" data-index="{{index}}">删除</view>
+      </view>
+      <view class='nomore' wx:if="{{!hasmore}}">没有更多地址了</view>
+    </view>
+  </view> -->
+  <view class='addresnai' wx:if="{{noaddress}}">
+    <view class='lines'></view>
+    <view>暂无地址信息</view>
+    <view class='lines'></view>
+  </view>
+  <!-- .......................................................... -->
+
+  <view class="item-wrapper" wx:if="{{!noaddress}}">
+    <view class='upwrap' wx:for="{{addrelist}}" wx:for-item="item" wx:for-index="index" wx:key="that">
+      <view class="item-list">
+        <view class="item-info" data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="left:{{item.left + 'rpx'}}">
+          <view class=''>
+            <checkbox-group>
+              <icon wx:if="{{item.isdefault=='1'}}" type="success" color="#ff9812" bindtap="selectdefat" data-index="{{index}}" class='icons' />
+              <icon wx:if="{{item.isdefault=='0'}}" type="circle" bindtap="selectdefat" data-index="{{index}}" class='icons'/>
+            </checkbox-group>
+          </view>
+          <view class="adresmag" bindtap="select" data-id='{{item.id}}' data-areaid="{{item.areaid}}">
+            <view class='usernames'>
+              <text>{{item.receiver}}</text>
+              <text>{{item.mobile}}</text>
+            </view>
+            <view class='adre'>
+              <text wx:if="{{item.isdefault=='1'}}" class='firsts'>[默认]</text>
+              <text class='lasts'>{{item.area.gname}}{{item.area.pname}}{{item.area.name}}{{item.address}}</text>
+            </view>
+          </view>
+          <view data-id='{{item.id}}' bindtap="importid">
+            <image class="item-icon" mode="widthFix" src="{{icon}}"></image>
+          </view>
+        </view>
+        <view class="item-oper">
+          <view class="oper-delete" bindtap="itemDelete" data-index="{{index}}" data-gid="{{item.gid}}" data-id="{{item.id}}">删除</view>
+        </view>
+      </view>
+    </view>
+    <view class='nomore' wx:if="{{!hasmore}}">没有更多地址了</view>
+  </view>
+  <!-- ....................................................................... -->
+  <navigator url='/pages/addreset/addreset'>
+    <view class='addr'>
+      <button>新增收货地址</button>
+    </view>
+  </navigator>
+</view>

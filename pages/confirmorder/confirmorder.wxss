@@ -1,0 +1,211 @@
+/* pages/confirmorder/confirmorder.wxss */
+.producmsg{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 0 20rpx;
+}
+.products{
+  height: 180rpx;
+  background: #fff;
+  margin-top: 10rpx;
+}
+.products image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.prodeat{
+  width: 550rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.prodea-msg{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.prodea-msg view:first-child{
+  font-size: 14px;
+  color: #333;
+}
+.prodea-msg view:last-child{
+  font-size: 16px;
+  color: #ff4426;
+}
+.prodea-msg view:last-child text{
+  font-size: 10px;
+  color: #999;
+  text-decoration:line-through;
+  margin-left: 10rpx;
+}
+.prodea-msg .guige{
+  font-size: 10px;
+  color: #333;
+}
+.numbers{
+  font-size: 16px;
+  color:#666;
+  vertical-align: bottom;
+}
+.canzhuo{
+  margin-top: 10rpx;
+  
+}
+.canzhuo,.canju{
+  padding: 0 20rpx;
+  background: #fff;
+  height: 90rpx;
+}
+.padcan,.padju{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89rpx;
+}
+.padcan{
+  border-bottom: 1px solid #e6e6e6;
+}
+.padcan view,.padju view{
+  color: #333;
+  font-size: 16px;
+}
+.rightos text{
+  font-size: 12px;
+  color: #999;
+}
+.rightos image{
+  width: 13rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+.yoouhui{
+  margin-top: 10rpx;
+}
+.yihouhui{
+  border-top: 1px solid #e6e6e6;
+}
+.yihouhui view:last-child{
+  color: #1aad19;
+}
+.beizhu{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 20rpx;
+  margin-top: 10rpx;
+  height: 90rpx;
+}
+.beizhu view:first-child{
+  font-size: 16px;
+  color: #333;
+}
+.tidan{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.tidan view text{
+  font-size: 16px;
+  color: #333;
+}
+
+.tidan button{
+  background: #ff9812;
+  color: #fff;
+  line-height: 90rpx;
+  width: 250rpx;
+  height: 90rpx;
+  border-radius: 0;
+  margin: 0;
+}
+.actived{
+  border-bottom: 2px solid #ffbb38;
+  border-color: #ffbb38;
+  border-left: 1px solid #ffbb38;
+  border-right: 1px solid #ffbb38;
+}
+.actived view{
+  color: #ffbb38;
+}
+.peisong{
+  border-top: 1px solid #e6e6e6;
+}
+.padcan input view{
+  width: 50%;
+  height: 100%;
+}
+
+.canshi{
+  background: #fff;
+  margin-top: 10rpx;
+  height: 184rpx;
+  padding-top: 20rpx;
+}
+.canshi view{
+  font-size: 16px;
+  color: #333;
+  padding: 0 20rpx;
+}
+.radio-group label{
+  display: block;
+  padding: 0 20rpx;
+  font-size: 14px;
+  color: #333;
+}
+.radio-group label radio{
+  transform: scale(.7);
+}
+.radio-group label:first-child{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.padju view.shous:first-child text{
+  font-size: 12px;
+  color: #333;
+  margin-left: 10rpx;
+  width: 389rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.rightos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.picker-time{
+  float: left;
+   width:30%;
+   padding: 10rpx;
+   margin-right: 10rpx;
+   }
+.left{
+  margin-left: 180rpx;
+  position:absolute;
+  width:100%;
+}
+
+.pricesa text:first-child{
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #ff9812;
+}
+.pricesa text:last-child{
+  font-size: 48rpx;
+  font-weight: 500;
+  color: #ff9812;
+}

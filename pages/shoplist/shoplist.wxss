@@ -1,0 +1,323 @@
+/* pages/shoplist/shoplist.wxss */
+@import "/dist/tabbar/tabbar.wxss";
+
+.allpage {
+  padding-bottom: 190rpx;
+  padding-top: 90rpx;
+}
+
+.shophead {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  align-items: center;
+  background: #fff;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.shophead .checkbox {
+  font-size: 16px;
+  color: #333;
+}
+
+.checkbox checkbox {
+  display: none;
+}
+
+.shophead view {
+  color: #333;
+  font-size: 16px;
+  padding: 20rpx;
+}
+
+.checkbox image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.producmsg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.products {
+  height: 160rpx;
+  padding: 0 10rpx;
+}
+
+.products image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.prodeat {
+  width: 480rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.prodeat .procart image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.prodea-msg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.prodea-msg view:first-child {
+  font-size: 14px;
+  color: #333;
+  text-overflow: ellipsis;
+  /* display: -webkit-box;  *//* -webkit-line-clamp: 2; *//* -webkit-box-orient: vertical; */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.prodea-msg view:last-child {
+  font-size: 16px;
+  color: #ff4426;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  /* display: -webkit-box;   *//* -webkit-line-clamp: 2; *//* -webkit-box-orient: vertical; */
+}
+
+.prodea-msg view:nth-child(2) {
+  font-size: 10px;
+  color: #999;
+}
+
+.produs {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 180rpx;
+  margin-top: 10rpx;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counts image {
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+}
+
+.counts text {
+  width: 45rpx;
+  text-align: center;
+  font-size: 18px;
+  color: #ff9812;
+  display: block;
+  margin: 0 20rpx;
+}
+
+.confirms {
+  background: #fff;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  bottom: 98rpx;
+}
+
+.conumbers view {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.conumbers view {
+  color: #ff4426;
+}
+
+.confirms button {
+  background: #ff9812;
+  color: #fff;
+  border: none;
+  height: 100%;
+  width: 200rpx;
+  border-radius: 0;
+  margin: 0;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.conumbers view:last-child {
+  font-size: 24rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+
+.conumbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550rpx;
+  padding: 0 20rpx;
+}
+
+.pride text {
+  color: #ff9812;
+}
+
+.pride text:first-child {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.pride text:last-child {
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.delets {
+  background: #fff;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  bottom: 98rpx;
+}
+
+.delets button {
+  background: #f92e27;
+  color: #fff;
+  height: 100%;
+  width: 200rpx;
+  border-radius: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.confirmdelet {
+  text-align: center;
+}
+
+.confirmdelet view:first-child {
+  font-size: 14px;
+  color: #666;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.choice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choice view button {
+  background: #fff;
+  border-radius: 0;
+  width: 230rpx;
+  border: none;
+  line-height: 100rpx;
+}
+
+.choice view:first-child button {
+  color: #333;
+  font-size: 16px;
+}
+
+.choice view button {
+  color: #1aad19;
+  font-size: 16px;
+}
+
+.choice {
+  height: 100rpx;
+}
+
+.choice view button, .choice view {
+  height: 100%;
+}
+
+.flowarea {
+  width: 460rpx;
+  height: 200rpx;
+  border: 0;
+  z-index: 50;
+  position: fixed;
+  background: #fff;
+  bottom: 50%;
+  left: 20%;
+  border-radius: 5px 5px;
+}
+
+.shophead checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.shophead checkbox-group text {
+  font-size: 16px;
+  color: #333;
+}
+
+.shophead checkbox-group icon {
+  transform: scale(0.8);
+  padding: 30 0;
+}
+
+.produs checkbox-group icon {
+  transform: scale(0.8);
+  padding: 80rpx 0;
+}
+
+.bgcol {
+  margin: 0 auto;
+  padding-top: 320rpx;
+  text-align: center;
+}
+
+.bgcol image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.bgcol text {
+  display: block;
+  font-size: 16px;
+  color: #cdcdcd;
+}
+
+.priceopt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceopt view:first-child {
+  color: #f92e27;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.bianji{
+  margin-right: 40rpx;
+}

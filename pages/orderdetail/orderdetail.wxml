@@ -1,0 +1,71 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class='allpage'>
+  <view class='zhuang'>
+    <view class='header'>
+      <view>
+        <image src="/images/zhuang.png"></image>
+      </view>
+      <view>订单状态：{{details.status_text}}</view>
+    </view>
+  </view>
+  <view class='maijia'>
+    <view class='icons'>
+      <image src="/images/addres.png"></image>
+    </view>
+    <view class='msgss'>
+      <view class='usermsg'>
+        <view>收货人：{{details.receiver}}</view>
+        <view>手机号码：{{details.mobile}}</view>
+      </view>
+      <view>收货地址：{{details.area.gname+details.area.pname+details.area.name+details.address}}</view>
+    </view>
+  </view>
+  <view class='orderdetails' wx:for="{{details.items}}" wx:key="keys">
+    <view class='oderimg'>
+      <image src="{{imgurl+item.goods.mphoto}}"></image>
+    </view>
+    <view class='odername'>
+      <text>{{item.goods.title}}</text>
+      <text wx:if="{{item.sname!=''}}">商品规格：{{item.option.title}}</text>
+    </view>
+    <view class='orderprice'>
+      <text>￥{{item.price}}</text>
+      <text>X{{item.counts}}</text>
+    </view>
+  </view>
+  <view class='payarea'>
+    <view>
+      <text>商品总价</text>
+      <text>运费</text>
+      <text>优惠</text>
+      <text class='pays'>实际付款</text>
+    </view>
+    <view>
+      <text>￥{{details.goodsprice}}</text>
+      <text>￥{{details.expressprice}}</text>
+      <text>-￥{{details.reduce}}</text>
+      <text class='pays'>￥{{details.price}}</text>
+    </view>
+  </view>
+  <view class="orderpage">
+    <text>订单编号：{{details.orderno}}</text>
+    <text>创建时间：{{details.created_at}}</text>
+    <text wx:if="{{details.sendtime!=0}}">发货时间：{{details.sent_at}}</text>
+    <text wx:if="{{details.finishtime!=0}}">完成时间：{{details.finished_at}}</text>
+  </view>
+  <view class='remarks'>备注信息：{{details.remarks}}</view>
+  <view class='bottmqiu'>
+    <view wx:if="{{details.status==3||details.status==4||details.status==6}}">
+      <button bindtap="more" type='button'>再次购买</button>
+    </view>
+    <view wx:if='{{details.status==3||details.status==4||details.status==6||details.status==7}}'>
+      <button bindtap="delets" type='button' data-orderno="{{details.orderno}}">删除订单</button>
+    </view>
+    <view>
+      <button open-type='contact' type='button'>联系客服</button>
+    </view>
+    <view wx:if="{{details.status==2||details.status==3}}">
+      <button bindtap="loock" type='button' data-orderno="{{details.orderno}}">查看物流</button>
+    </view>
+  </view>
+</view>

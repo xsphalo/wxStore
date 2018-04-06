@@ -1,0 +1,70 @@
+<!--pages/vips/vips.wxml-->
+<import src="/dist/tabbar/tabbar.wxml" />
+<template is="tabbar" data="{{tabbar,rlen:rlen}}" />
+<import src="/dist/notice/notice.wxml" />
+<template is="notice" data="{{notice:notice,hide:hide,animshow:animshow}}" />
+<import src="/dist/share/share.wxml" />
+<template is="share" data='{{direct:direct,save:save,actionSheetHidden:actionSheetHidden}}' />
+<view class='allpage'>
+  <view class='vips-head'>
+    <view class='headleft' bindtap='tequan'>
+      <image src="/images/_icon.png"></image>
+      <view>特权说明</view>
+    </view>
+    <view class='headright' bindtap='toshare'>
+      <button type='button'>推广</button>
+    </view>
+  </view>
+  <view class='pingj'>
+    <image src="/images/vip.png"></image>
+    <view class='curents'>{{vips.current.title}}</view>
+  </view>
+  <view class='vipname'>会员名称</view>
+  <view class='bgcolor'>
+    <view class='progress'>
+      <block wx:for="{{vips.levels}}" wx:key="keys">
+        <view class="{{vips.current.levels<=item.levels?'active':''}}"></view>
+      </block>
+    </view>
+    <view class='proname'>
+      <block wx:for="{{vips.levels}}" wx:key="keys">
+        <view class="{{vips.current.levels==item.levels?'actives':''}}">{{item.title}}</view>
+      </block>
+    </view>
+  </view>
+  <view class='middleceon' wx:if="{{vips.next.gids.length}}">
+    <view class='mileft'>
+      <view class='lefttop'>
+        <view></view>
+        <view>升级VIP会员</view>
+      </view>
+      <view class='leftbot'>
+        <image src="/images/chuangye.png"></image>
+        <view>创业礼包</view>
+      </view>
+    </view>
+    <view class='miright' bindtap='tovip' data-id="{{vips.next.id}}">
+      <button type='button'>立即升级</button>
+    </view>
+  </view>
+  <view class='explain '>
+    <view class='lefttop guiz'>
+      <view></view>
+      <view>升级规则</view>
+    </view>
+    <view class='expl'>
+      <block wx:for="{{rule}}" wx:key="keys">
+        <view>{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <!-- <view class='shade' style="display:{{screenType?'block':'none'}}" bindtap='hideshade'></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <image src="/images/boxs.png" class='myimg'></image>
+    <view class='btns'>
+      <button type='button'>立即购买</button>
+      <button type='button'>查看特权</button>
+      <image src="/images/close.png" class='closing'></image>
+    </view>
+  </view> -->
+</view>

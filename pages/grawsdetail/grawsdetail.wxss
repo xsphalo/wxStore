@@ -1,0 +1,44 @@
+/* pages/grawsdetail/grawsdetail.wxss */
+
+.detaisl {
+  background: #fff;
+  padding: 0 20rpx;
+  height: 96rpx;
+  padding-top: 30rpx;
+  box-sizing: content-box;
+  margin-bottom: 10rpx;
+}
+
+.detag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.detag view:first-child{
+  font-size: 30rpx;
+  color: #333;
+}
+.detag view:last-child{
+  font-size: 30rpx;
+  color: #ff9812;
+}
+
+
+.comBot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.detime{
+  font-size: 24rpx;
+  color: #999;
+}
+
+.comStates{
+  font-size:18rpx;
+  color:#999;
+}
